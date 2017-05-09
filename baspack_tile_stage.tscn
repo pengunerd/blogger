@@ -1,0 +1,814 @@
+[gd_scene load_steps=50 format=1]
+
+[ext_resource path="res://basepack_ground_collision/box.png" type="Texture" id=1]
+[ext_resource path="res://basepack_ground_collision/grass.png" type="Texture" id=2]
+[ext_resource path="res://basepack_ground_collision/grassCenter.png" type="Texture" id=3]
+[ext_resource path="res://basepack_ground_collision/grassCenter_rounded.png" type="Texture" id=4]
+[ext_resource path="res://basepack_ground_collision/grassCliffLeft.png" type="Texture" id=5]
+[ext_resource path="res://basepack_ground_collision/grassCliffLeftAlt.png" type="Texture" id=6]
+[ext_resource path="res://basepack_ground_collision/grassCliffRight.png" type="Texture" id=7]
+[ext_resource path="res://basepack_ground_collision/grassCliffRightAlt.png" type="Texture" id=8]
+[ext_resource path="res://basepack_ground_collision/grassHalf.png" type="Texture" id=9]
+[ext_resource path="res://basepack_ground_collision/grassHalfRight.png" type="Texture" id=10]
+[ext_resource path="res://basepack_ground_collision/grassHalfMid.png" type="Texture" id=11]
+[ext_resource path="res://basepack_ground_collision/grassHalfLeft.png" type="Texture" id=12]
+[ext_resource path="res://basepack_ground_collision/grassHillLeft2.png" type="Texture" id=13]
+[ext_resource path="res://basepack_ground_collision/grassHillLeft.png" type="Texture" id=14]
+[ext_resource path="res://basepack_ground_collision/grassHillRight.png" type="Texture" id=15]
+[ext_resource path="res://basepack_ground_collision/grassHillRight2.png" type="Texture" id=16]
+[ext_resource path="res://basepack_ground_collision/grassLedgeLeft.png" type="Texture" id=17]
+[ext_resource path="res://basepack_ground_collision/grassLedgeRight.png" type="Texture" id=18]
+[ext_resource path="res://basepack_ground_collision/grassLeft.png" type="Texture" id=19]
+[ext_resource path="res://basepack_ground_collision/grassMid.png" type="Texture" id=20]
+[ext_resource path="res://basepack_ground_collision/grassRight.png" type="Texture" id=21]
+
+[sub_resource type="ConvexPolygonShape2D" id=1]
+
+custom_solver_bias = 0.0
+points = Vector2Array( -35, -35, 35, -35, 35, 35, -35, 35 )
+
+[sub_resource type="ConvexPolygonShape2D" id=2]
+
+custom_solver_bias = 0.0
+points = Vector2Array( -35, -35, 35, -35, 35, 35, -35, 35 )
+
+[sub_resource type="ConvexPolygonShape2D" id=3]
+
+custom_solver_bias = 0.0
+points = Vector2Array( -35, -35, 35, -35, 35, 35, -35, 35 )
+
+[sub_resource type="ConvexPolygonShape2D" id=4]
+
+custom_solver_bias = 0.0
+points = Vector2Array( -35, -35, 35, -35, 35, 35, -35, 35 )
+
+[sub_resource type="ConvexPolygonShape2D" id=5]
+
+custom_solver_bias = 0.0
+points = Vector2Array( 11.9055, 32.2501, -7.06793, 25.6621, -18.6628, 18.8106, -28.4131, 9.85086, -35.0333, -4.7201, -35, -35, 35, -35, 35, 35 )
+
+[sub_resource type="ConvexPolygonShape2D" id=6]
+
+custom_solver_bias = 0.0
+points = Vector2Array( -21.7009, -3.37684, -35, -35, 35, -35, 35, 35, -8.60797, 7.56973 )
+
+[sub_resource type="ConvexPolygonShape2D" id=7]
+
+custom_solver_bias = 0.0
+points = Vector2Array( -21.7009, -3.37684, -35.0085, -11.3185, -35, -35 )
+
+[sub_resource type="ConvexPolygonShape2D" id=8]
+
+custom_solver_bias = 0.0
+points = Vector2Array( 3.84113, 21.9505, -8.60797, 7.56973, 35, 35 )
+
+[sub_resource type="ConvexPolygonShape2D" id=9]
+
+custom_solver_bias = 0.0
+points = Vector2Array( 3.84113, 21.9505, 35, 35, 12.212, 35.2581, 10.9242, 34.6142 )
+
+[sub_resource type="ConvexPolygonShape2D" id=10]
+
+custom_solver_bias = 0.0
+points = Vector2Array( -35, 35, -35, -35, 35, -35, 34.5532, -5.36881, 29.1337, 7.56821, 19.1686, 18.9318, 2.5603, 27.3234, -17.8942, 33.4423 )
+
+[sub_resource type="ConvexPolygonShape2D" id=11]
+
+custom_solver_bias = 0.0
+points = Vector2Array( -35, -35, 35, -35, 34.9905, -11.5717, 15.0551, 1.24396 )
+
+[sub_resource type="ConvexPolygonShape2D" id=12]
+
+custom_solver_bias = 0.0
+points = Vector2Array( -35, 35, -35, -35, 15.0551, 1.24396, 3.4823, 12.1082 )
+
+[sub_resource type="ConvexPolygonShape2D" id=13]
+
+custom_solver_bias = 0.0
+points = Vector2Array( -35, 35, 3.4823, 12.1082, -7.40405, 26.5977 )
+
+[sub_resource type="ConvexPolygonShape2D" id=14]
+
+custom_solver_bias = 0.0
+points = Vector2Array( -35, 35, -7.40405, 26.5977, -11.5258, 35.1545 )
+
+[sub_resource type="ConvexPolygonShape2D" id=15]
+
+custom_solver_bias = 0.0
+points = Vector2Array( -11.5258, 35.1545, -35, 35, -35, 35 )
+
+[sub_resource type="ConvexPolygonShape2D" id=16]
+
+custom_solver_bias = 0.0
+points = Vector2Array( -35, -35, 35, -35, 34.9603, 5.26732, -34.951, 5.26732 )
+
+[sub_resource type="ConvexPolygonShape2D" id=17]
+
+custom_solver_bias = 0.0
+points = Vector2Array( -35, -35, 35, -35, 35.0314, 5.92447, -35.1378, 5.92447 )
+
+[sub_resource type="ConvexPolygonShape2D" id=18]
+
+custom_solver_bias = 0.0
+points = Vector2Array( -35, -35, 35, -35, 35.0358, 5.14159, -35.0033, 5.14159 )
+
+[sub_resource type="ConvexPolygonShape2D" id=19]
+
+custom_solver_bias = 0.0
+points = Vector2Array( -35, -35, 35, -35, 34.908, 4.86288, -34.9716, 5.03859 )
+
+[sub_resource type="ConvexPolygonShape2D" id=20]
+
+custom_solver_bias = 0.0
+points = Vector2Array( -35, -35, 35, -35, 35, 35, -35, 35 )
+
+[sub_resource type="ConvexPolygonShape2D" id=21]
+
+custom_solver_bias = 0.0
+points = Vector2Array( 35, 35, -35, 35, 35, -35 )
+
+[sub_resource type="ConvexPolygonShape2D" id=22]
+
+custom_solver_bias = 0.0
+points = Vector2Array( 35, 35, -35, 35, -35, -35 )
+
+[sub_resource type="ConvexPolygonShape2D" id=23]
+
+custom_solver_bias = 0.0
+points = Vector2Array( -35, -35, 35, -35, 35, 35, -35, 35 )
+
+[sub_resource type="ConvexPolygonShape2D" id=24]
+
+custom_solver_bias = 0.0
+points = Vector2Array( -35, -35, -29.9026, -35.0304, -29.9065, -10.8911, -30.8279, -11.0753, -34.9742, -25.6794 )
+
+[sub_resource type="ConvexPolygonShape2D" id=25]
+
+custom_solver_bias = 0.0
+points = Vector2Array( -30.0178, -34.9646, -30.0178, -24.3876, -33.3549, -14.1499, -35.1649, -11.2653, -35.1578, -35 )
+
+[sub_resource type="ConvexPolygonShape2D" id=26]
+
+custom_solver_bias = 0.0
+points = Vector2Array( -35, -35, 35, -35, 35, 35, -35, 35 )
+
+[sub_resource type="ConvexPolygonShape2D" id=27]
+
+custom_solver_bias = 0.0
+points = Vector2Array( -35, -35, 35, -35, 35, 35, -35, 35 )
+
+[sub_resource type="ConvexPolygonShape2D" id=28]
+
+custom_solver_bias = 0.0
+points = Vector2Array( -35, -35, 35, -35, 35, 35, -35, 35 )
+
+[node name="Node" type="Node"]
+
+[node name="box1" type="Sprite" parent="."]
+
+texture = ExtResource( 1 )
+centered = false
+
+[node name="StaticBody2D" type="StaticBody2D" parent="box1"]
+
+transform/pos = Vector2( 35, 35 )
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="box1/StaticBody2D"]
+
+build_mode = 0
+polygon = Vector2Array( -35, -35, 35, -35, 35, 35, -35, 35 )
+shape_range = Vector2( 0, 0 )
+trigger = false
+
+[node name="grass" type="Sprite" parent="."]
+
+transform/pos = Vector2( 140, -140 )
+texture = ExtResource( 2 )
+centered = false
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="grass"]
+
+transform/pos = Vector2( 35, 35 )
+input/pickable = false
+shapes/0/shape = SubResource( 2 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="grass/StaticBody2D"]
+
+build_mode = 0
+polygon = Vector2Array( -35, -35, 35, -35, 35, 35, -35, 35 )
+shape_range = Vector2( 0, 0 )
+trigger = false
+
+[node name="grassCenter" type="Sprite" parent="."]
+
+transform/pos = Vector2( 280, -140 )
+texture = ExtResource( 3 )
+centered = false
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="grassCenter"]
+
+transform/pos = Vector2( 35, 35 )
+input/pickable = false
+shapes/0/shape = SubResource( 3 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="grassCenter/StaticBody2D"]
+
+build_mode = 0
+polygon = Vector2Array( -35, -35, 35, -35, 35, 35, -35, 35 )
+shape_range = Vector2( 0, 0 )
+trigger = false
+
+[node name="grassCenter_rounded" type="Sprite" parent="."]
+
+transform/pos = Vector2( 420, -140 )
+texture = ExtResource( 4 )
+centered = false
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="grassCenter_rounded"]
+
+transform/pos = Vector2( 35, 35 )
+input/pickable = false
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="grassCenter_rounded/StaticBody2D"]
+
+build_mode = 0
+polygon = Vector2Array( -35, -35, 35, -35, 35, 35, -35, 35 )
+shape_range = Vector2( 0, 0 )
+trigger = false
+
+[node name="grassCliffLeft" type="Sprite" parent="."]
+
+transform/pos = Vector2( 560, 0 )
+texture = ExtResource( 5 )
+centered = false
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="grassCliffLeft"]
+
+transform/pos = Vector2( 35, 35 )
+input/pickable = false
+shapes/0/shape = SubResource( 5 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="grassCliffLeft/StaticBody2D"]
+
+build_mode = 0
+polygon = Vector2Array( 35, 35, 35, -35, -35, -35, -35.0333, -4.7201, -28.4131, 9.85086, -18.6628, 18.8106, -7.06793, 25.6621, 11.9055, 32.2501 )
+shape_range = Vector2( 0, 0 )
+trigger = false
+
+[node name="grassCliffLeftAlt" type="Sprite" parent="."]
+
+transform/pos = Vector2( 700, 0 )
+texture = ExtResource( 6 )
+centered = false
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="grassCliffLeftAlt"]
+
+transform/pos = Vector2( 35, 35 )
+input/pickable = false
+shapes/0/shape = SubResource( 6 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+shapes/1/shape = SubResource( 7 )
+shapes/1/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/1/trigger = false
+shapes/2/shape = SubResource( 8 )
+shapes/2/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/2/trigger = false
+shapes/3/shape = SubResource( 9 )
+shapes/3/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/3/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="grassCliffLeftAlt/StaticBody2D"]
+
+build_mode = 0
+polygon = Vector2Array( 35, 35, 35, -35, -35, -35, -35.0085, -11.3185, -21.7009, -3.37684, -8.60797, 7.56973, 3.84113, 21.9505, 10.9242, 34.6142, 12.212, 35.2581 )
+shape_range = Vector2( 0, 3 )
+trigger = false
+
+[node name="grassCliffRight" type="Sprite" parent="."]
+
+transform/pos = Vector2( 840, 0 )
+texture = ExtResource( 7 )
+centered = false
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="grassCliffRight"]
+
+transform/pos = Vector2( 35, 35 )
+input/pickable = false
+shapes/0/shape = SubResource( 10 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="grassCliffRight/StaticBody2D"]
+
+build_mode = 0
+polygon = Vector2Array( -35, 35, -35, -35, 35, -35, 34.5532, -5.36881, 29.1337, 7.56821, 19.1686, 18.9318, 2.5603, 27.3234, -17.8942, 33.4423 )
+shape_range = Vector2( 0, 0 )
+trigger = false
+
+[node name="grassCliffRightAlt" type="Sprite" parent="."]
+
+transform/pos = Vector2( 840, 140 )
+texture = ExtResource( 8 )
+centered = false
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="grassCliffRightAlt"]
+
+transform/pos = Vector2( 35, 35 )
+input/pickable = false
+shapes/0/shape = SubResource( 11 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+shapes/1/shape = SubResource( 12 )
+shapes/1/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/1/trigger = false
+shapes/2/shape = SubResource( 13 )
+shapes/2/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/2/trigger = false
+shapes/3/shape = SubResource( 14 )
+shapes/3/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/3/trigger = false
+shapes/4/shape = SubResource( 15 )
+shapes/4/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/4/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="grassCliffRightAlt/StaticBody2D"]
+
+build_mode = 0
+polygon = Vector2Array( -35, 35, -35, 35, -35, -35, 35, -35, 34.9905, -11.5717, 15.0551, 1.24396, 3.4823, 12.1082, -7.40405, 26.5977, -11.5258, 35.1545 )
+shape_range = Vector2( 0, 4 )
+trigger = false
+
+[node name="grassHalf" type="Sprite" parent="."]
+
+transform/pos = Vector2( 700, 140 )
+texture = ExtResource( 9 )
+centered = false
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="grassHalf"]
+
+transform/pos = Vector2( 35, 35 )
+input/pickable = false
+shapes/0/shape = SubResource( 16 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="grassHalf/StaticBody2D"]
+
+build_mode = 0
+polygon = Vector2Array( -35, -35, 35, -35, 34.9603, 5.26732, -34.951, 5.26732 )
+shape_range = Vector2( 0, 0 )
+trigger = false
+
+[node name="grassHalfRight" type="Sprite" parent="."]
+
+transform/pos = Vector2( 560, 140 )
+texture = ExtResource( 10 )
+centered = false
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="grassHalfRight"]
+
+transform/pos = Vector2( 35, 35 )
+input/pickable = false
+shapes/0/shape = SubResource( 17 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="grassHalfRight/StaticBody2D"]
+
+build_mode = 0
+polygon = Vector2Array( -35, -35, 35, -35, 35.0314, 5.92447, -35.1378, 5.92447 )
+shape_range = Vector2( 0, 0 )
+trigger = false
+
+[node name="grassHalfMid" type="Sprite" parent="."]
+
+transform/pos = Vector2( 420, 140 )
+texture = ExtResource( 11 )
+centered = false
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="grassHalfMid"]
+
+transform/pos = Vector2( 35, 35 )
+input/pickable = false
+shapes/0/shape = SubResource( 18 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="grassHalfMid/StaticBody2D"]
+
+build_mode = 0
+polygon = Vector2Array( -35, -35, 35, -35, 35.0358, 5.14159, -35.0033, 5.14159 )
+shape_range = Vector2( 0, 0 )
+trigger = false
+
+[node name="grassHalfLeft" type="Sprite" parent="."]
+
+transform/pos = Vector2( 280, 140 )
+texture = ExtResource( 12 )
+centered = false
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="grassHalfLeft"]
+
+transform/pos = Vector2( 35, 35 )
+input/pickable = false
+shapes/0/shape = SubResource( 19 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="grassHalfLeft/StaticBody2D"]
+
+build_mode = 0
+polygon = Vector2Array( -35, -35, 35, -35, 34.908, 4.86288, -34.9716, 5.03859 )
+shape_range = Vector2( 0, 0 )
+trigger = false
+
+[node name="grassHillLeft2" type="Sprite" parent="."]
+
+transform/pos = Vector2( 140, 140 )
+texture = ExtResource( 13 )
+centered = false
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="grassHillLeft2"]
+
+transform/pos = Vector2( 35, 35 )
+input/pickable = false
+shapes/0/shape = SubResource( 20 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="grassHillLeft2/StaticBody2D"]
+
+build_mode = 0
+polygon = Vector2Array( -35, -35, 35, -35, 35, 35, -35, 35 )
+shape_range = Vector2( 0, 0 )
+trigger = false
+
+[node name="grassHillLeft" type="Sprite" parent="."]
+
+transform/pos = Vector2( 0, 140 )
+texture = ExtResource( 14 )
+centered = false
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="grassHillLeft"]
+
+transform/pos = Vector2( 35, 35 )
+input/pickable = false
+shapes/0/shape = SubResource( 21 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="grassHillLeft/StaticBody2D"]
+
+build_mode = 0
+polygon = Vector2Array( 35, -35, -35, 35, 35, 35 )
+shape_range = Vector2( 0, 0 )
+trigger = false
+
+[node name="grassHillRight" type="Sprite" parent="."]
+
+transform/pos = Vector2( 0, 280 )
+texture = ExtResource( 15 )
+centered = false
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="grassHillRight"]
+
+transform/pos = Vector2( 35, 35 )
+input/pickable = false
+shapes/0/shape = SubResource( 22 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="grassHillRight/StaticBody2D"]
+
+build_mode = 0
+polygon = Vector2Array( -35, -35, -35, 35, 35, 35 )
+shape_range = Vector2( 0, 0 )
+trigger = false
+
+[node name="grassHillRight2" type="Sprite" parent="."]
+
+transform/pos = Vector2( 140, 280 )
+texture = ExtResource( 16 )
+centered = false
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="grassHillRight2"]
+
+transform/pos = Vector2( 35, 35 )
+input/pickable = false
+shapes/0/shape = SubResource( 23 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="grassHillRight2/StaticBody2D"]
+
+build_mode = 0
+polygon = Vector2Array( -35, -35, 35, -35, 35, 35, -35, 35 )
+shape_range = Vector2( 0, 0 )
+trigger = false
+
+[node name="grassLedgeLeft" type="Sprite" parent="."]
+
+transform/pos = Vector2( 280, 280 )
+texture = ExtResource( 17 )
+centered = false
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="grassLedgeLeft"]
+
+transform/pos = Vector2( 35, 35 )
+input/pickable = false
+shapes/0/shape = SubResource( 24 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="grassLedgeLeft/StaticBody2D"]
+
+build_mode = 0
+polygon = Vector2Array( -35, -35, -29.9026, -35.0304, -29.9065, -10.8911, -30.8279, -11.0753, -34.9742, -25.6794 )
+shape_range = Vector2( 0, 0 )
+trigger = false
+
+[node name="grassLedgeRight" type="Sprite" parent="."]
+
+transform/pos = Vector2( 420.158, 280 )
+texture = ExtResource( 18 )
+centered = false
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="grassLedgeRight"]
+
+transform/pos = Vector2( 35, 35 )
+input/pickable = false
+shapes/0/shape = SubResource( 25 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="grassLedgeRight/StaticBody2D"]
+
+build_mode = 0
+polygon = Vector2Array( -35.1578, -35, -35.1649, -11.2653, -33.3549, -14.1499, -30.0178, -24.3876, -30.0178, -34.9646 )
+shape_range = Vector2( 0, 0 )
+trigger = false
+
+[node name="grassLeft" type="Sprite" parent="."]
+
+transform/pos = Vector2( 140, 0 )
+texture = ExtResource( 19 )
+centered = false
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="grassLeft"]
+
+transform/pos = Vector2( 35, 35 )
+input/pickable = false
+shapes/0/shape = SubResource( 26 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="grassLeft/StaticBody2D"]
+
+build_mode = 0
+polygon = Vector2Array( -35, -35, 35, -35, 35, 35, -35, 35 )
+shape_range = Vector2( 0, 0 )
+trigger = false
+
+[node name="grassMid" type="Sprite" parent="."]
+
+transform/pos = Vector2( 280, 0 )
+texture = ExtResource( 20 )
+centered = false
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="grassMid"]
+
+transform/pos = Vector2( 35, 35 )
+input/pickable = false
+shapes/0/shape = SubResource( 27 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="grassMid/StaticBody2D"]
+
+build_mode = 0
+polygon = Vector2Array( -35, -35, 35, -35, 35, 35, -35, 35 )
+shape_range = Vector2( 0, 0 )
+trigger = false
+
+[node name="grassMid1" type="Sprite" parent="."]
+
+transform/pos = Vector2( 420, 0 )
+texture = ExtResource( 21 )
+centered = false
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="grassMid1"]
+
+transform/pos = Vector2( 35, 35 )
+input/pickable = false
+shapes/0/shape = SubResource( 28 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="grassMid1/StaticBody2D"]
+
+build_mode = 0
+polygon = Vector2Array( -35, -35, 35, -35, 35, 35, -35, 35 )
+shape_range = Vector2( 0, 0 )
+trigger = false
+
+
