@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<resource_file type="TileSet" subresource_count="51" version="2.1" version_name="Godot Engine v2.1.3.stable.official">
+<resource_file type="TileSet" subresource_count="49" version="2.1" version_name="Godot Engine v2.1.3.stable.official">
+	<ext_resource path="res://basepack_ground_collision/grassHillRight2.png" type="Texture" index="7"></ext_resource>
 	<ext_resource path="res://basepack_ground_collision/grassCliffRightAlt.png" type="Texture" index="18"></ext_resource>
-	<ext_resource path="res://basepack_ground_collision/grassCliffLeftAlt.png" type="Texture" index="16"></ext_resource>
 	<ext_resource path="res://basepack_ground_collision/grassLedgeLeft.png" type="Texture" index="8"></ext_resource>
-	<ext_resource path="res://basepack_ground_collision/grassCliffLeft.png" type="Texture" index="15"></ext_resource>
-	<ext_resource path="res://basepack_ground_collision/grassCliffRight.png" type="Texture" index="17"></ext_resource>
-	<ext_resource path="res://basepack_ground_collision/grassRight.png" type="Texture" index="13"></ext_resource>
 	<ext_resource path="res://basepack_ground_collision/grassHillLeft.png" type="Texture" index="5"></ext_resource>
+	<ext_resource path="res://basepack_ground_collision/grassCliffLeftAlt.png" type="Texture" index="16"></ext_resource>
+	<ext_resource path="res://basepack_ground_collision/grassCliffLeft.png" type="Texture" index="15"></ext_resource>
+	<ext_resource path="res://basepack_ground_collision/grassRight.png" type="Texture" index="13"></ext_resource>
 	<ext_resource path="res://basepack_ground_collision/grassLeft.png" type="Texture" index="10"></ext_resource>
+	<ext_resource path="res://basepack_ground_collision/grassCliffRight.png" type="Texture" index="17"></ext_resource>
 	<ext_resource path="res://basepack_ground_collision/grassHalfRight.png" type="Texture" index="20"></ext_resource>
 	<ext_resource path="res://basepack_ground_collision/grassHalfLeft.png" type="Texture" index="3"></ext_resource>
-	<ext_resource path="res://basepack_ground_collision/grassHillRight2.png" type="Texture" index="7"></ext_resource>
-	<ext_resource path="res://basepack_ground_collision/grassHalfMid.png" type="Texture" index="2"></ext_resource>
 	<ext_resource path="res://basepack_ground_collision/grassCenter.png" type="Texture" index="12"></ext_resource>
-	<ext_resource path="res://basepack_ground_collision/grassHalf.png" type="Texture" index="19"></ext_resource>
+	<ext_resource path="res://basepack_ground_collision/grassHalfMid.png" type="Texture" index="2"></ext_resource>
 	<ext_resource path="res://basepack_ground_collision/grassCenter_rounded.png" type="Texture" index="14"></ext_resource>
+	<ext_resource path="res://basepack_ground_collision/grassHillLeft2.png" type="Texture" index="4"></ext_resource>
+	<ext_resource path="res://basepack_ground_collision/grassHalf.png" type="Texture" index="19"></ext_resource>
+	<ext_resource path="res://basepack_ground_collision/grassHillRight.png" type="Texture" index="6"></ext_resource>
 	<ext_resource path="res://basepack_ground_collision/box.png" type="Texture" index="0"></ext_resource>
 	<ext_resource path="res://basepack_ground_collision/grassLedgeRight.png" type="Texture" index="9"></ext_resource>
-	<ext_resource path="res://basepack_ground_collision/grassHillLeft2.png" type="Texture" index="4"></ext_resource>
-	<ext_resource path="res://basepack_ground_collision/grass.png" type="Texture" index="1"></ext_resource>
-	<ext_resource path="res://basepack_ground_collision/grassHillRight.png" type="Texture" index="6"></ext_resource>
 	<ext_resource path="res://basepack_ground_collision/grassMid.png" type="Texture" index="11"></ext_resource>
+	<ext_resource path="res://basepack_ground_collision/grass.png" type="Texture" index="1"></ext_resource>
 	<resource type="ConvexPolygonShape2D" path="local://1">
 		<real name="custom_solver_bias"> 0 </real>
 		<vector2_array name="points" len="4"> 			-35, -35, 35, -35, 35, 35, -35, 35 </vector2_array>
@@ -61,27 +61,17 @@
 		<vector2_array name="points" len="4"> 			-35, -35, 35, -35, 35, 35, -35, 35 </vector2_array>
 
 	</resource>
-	<resource type="ConvexPolygonShape2D" path="local://24">
-		<real name="custom_solver_bias"> 0 </real>
-		<vector2_array name="points" len="4"> 			-2.44211, -1.47635, -2.44211, -12.5832, 2.68414, -12.5832, 2.68414, 13.048 </vector2_array>
-
-	</resource>
-	<resource type="ConvexPolygonShape2D" path="local://25">
-		<real name="custom_solver_bias"> 0 </real>
-		<vector2_array name="points" len="3"> 			-2.44211, -1.47635, 2.68414, 13.048, -2.86929, -0.621979 </vector2_array>
-
-	</resource>
-	<resource type="ConvexPolygonShape2D" path="local://26">
+	<resource type="ConvexPolygonShape2D" path="local://28">
 		<real name="custom_solver_bias"> 0 </real>
 		<vector2_array name="points" len="5"> 			-23.5242, -11.9527, -22.3009, -11.9642, -22.3321, -1.7085, -23.2673, 11.545, -23.4543, 10.9138 </vector2_array>
 
 	</resource>
-	<resource type="ConvexPolygonShape2D" path="local://27">
+	<resource type="ConvexPolygonShape2D" path="local://29">
 		<real name="custom_solver_bias"> 0 </real>
 		<vector2_array name="points" len="4"> 			-35, -35, 35, -35, 35, 35, -35, 35 </vector2_array>
 
 	</resource>
-	<resource type="ConvexPolygonShape2D" path="local://28">
+	<resource type="ConvexPolygonShape2D" path="local://26">
 		<real name="custom_solver_bias"> 0 </real>
 		<vector2_array name="points" len="4"> 			-35, -35, 35, -35, 35, 35, -35, 35 </vector2_array>
 
@@ -91,7 +81,7 @@
 		<vector2_array name="points" len="4"> 			-35, -35, 35, -35, 35, 35, -35, 35 </vector2_array>
 
 	</resource>
-	<resource type="ConvexPolygonShape2D" path="local://29">
+	<resource type="ConvexPolygonShape2D" path="local://27">
 		<real name="custom_solver_bias"> 0 </real>
 		<vector2_array name="points" len="4"> 			-35, -35, 35, -35, 35, 35, -35, 35 </vector2_array>
 
@@ -357,10 +347,8 @@
 		<rect2 name="16/region"> 0, 0, 5, 24 </rect2>
 		<vector2 name="16/occluder_offset"> 2.5, 12 </vector2>
 		<resource name="16/occluder"></resource>		<vector2 name="16/navigation_offset"> 2.5, 12 </vector2>
-		<resource name="16/navigation"></resource>		<vector2 name="16/shape_offset"> 2.5, 12 </vector2>
-		<array name="16/shapes" len="2" shared="false">
-			<resource  resource_type="Shape2D" path="local://24">  </resource>
-			<resource  resource_type="Shape2D" path="local://25">  </resource>
+		<resource name="16/navigation"></resource>		<vector2 name="16/shape_offset"> 0, 0 </vector2>
+		<array name="16/shapes" len="0" shared="false">
 		</array>
 		<string name="17/name"> "grassLedgeRight" </string>
 		<resource name="17/texture" external="9">  </resource>
@@ -371,7 +359,7 @@
 		<resource name="17/occluder"></resource>		<vector2 name="17/navigation_offset"> 2.5, 12 </vector2>
 		<resource name="17/navigation"></resource>		<vector2 name="17/shape_offset"> 2.5, 12 </vector2>
 		<array name="17/shapes" len="1" shared="false">
-			<resource  resource_type="Shape2D" path="local://26">  </resource>
+			<resource  resource_type="Shape2D" path="local://28">  </resource>
 		</array>
 		<string name="18/name"> "grassLeft" </string>
 		<resource name="18/texture" external="10">  </resource>
@@ -382,7 +370,7 @@
 		<resource name="18/occluder"></resource>		<vector2 name="18/navigation_offset"> 35, 35 </vector2>
 		<resource name="18/navigation"></resource>		<vector2 name="18/shape_offset"> 35, 35 </vector2>
 		<array name="18/shapes" len="1" shared="false">
-			<resource  resource_type="Shape2D" path="local://27">  </resource>
+			<resource  resource_type="Shape2D" path="local://29">  </resource>
 		</array>
 		<string name="19/name"> "grassMid" </string>
 		<resource name="19/texture" external="11">  </resource>
@@ -393,7 +381,7 @@
 		<resource name="19/occluder"></resource>		<vector2 name="19/navigation_offset"> 35, 35 </vector2>
 		<resource name="19/navigation"></resource>		<vector2 name="19/shape_offset"> 35, 35 </vector2>
 		<array name="19/shapes" len="1" shared="false">
-			<resource  resource_type="Shape2D" path="local://28">  </resource>
+			<resource  resource_type="Shape2D" path="local://26">  </resource>
 		</array>
 		<string name="20/name"> "grassMid1" </string>
 		<resource name="20/texture" external="13">  </resource>
@@ -404,7 +392,7 @@
 		<resource name="20/occluder"></resource>		<vector2 name="20/navigation_offset"> 35, 35 </vector2>
 		<resource name="20/navigation"></resource>		<vector2 name="20/shape_offset"> 35, 35 </vector2>
 		<array name="20/shapes" len="1" shared="false">
-			<resource  resource_type="Shape2D" path="local://29">  </resource>
+			<resource  resource_type="Shape2D" path="local://27">  </resource>
 		</array>
 
 	</main_resource>

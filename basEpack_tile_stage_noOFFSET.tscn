@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=1]
+[gd_scene load_steps=49 format=1]
 
 [ext_resource path="res://basepack_ground_collision/box.png" type="Texture" id=1]
 [ext_resource path="res://basepack_ground_collision/grass.png" type="Texture" id=2]
@@ -137,32 +137,22 @@ points = Vector2Array( 35, 35, -35, 35, -35, -35 )
 custom_solver_bias = 0.0
 points = Vector2Array( -35, -35, 35, -35, 35, 35, -35, 35 )
 
-[sub_resource type="ConvexPolygonShape2D" id=24]
-
-custom_solver_bias = 0.0
-points = Vector2Array( -2.44211, -1.47635, -2.44211, -12.5832, 2.68414, -12.5832, 2.68414, 13.048 )
-
-[sub_resource type="ConvexPolygonShape2D" id=25]
-
-custom_solver_bias = 0.0
-points = Vector2Array( -2.44211, -1.47635, 2.68414, 13.048, -2.86929, -0.621979 )
-
-[sub_resource type="ConvexPolygonShape2D" id=26]
+[sub_resource type="ConvexPolygonShape2D" id=28]
 
 custom_solver_bias = 0.0
 points = Vector2Array( -23.5242, -11.9527, -22.3009, -11.9642, -22.3321, -1.7085, -23.2673, 11.545, -23.4543, 10.9138 )
 
-[sub_resource type="ConvexPolygonShape2D" id=27]
-
-custom_solver_bias = 0.0
-points = Vector2Array( -35, -35, 35, -35, 35, 35, -35, 35 )
-
-[sub_resource type="ConvexPolygonShape2D" id=28]
-
-custom_solver_bias = 0.0
-points = Vector2Array( -35, -35, 35, -35, 35, 35, -35, 35 )
-
 [sub_resource type="ConvexPolygonShape2D" id=29]
+
+custom_solver_bias = 0.0
+points = Vector2Array( -35, -35, 35, -35, 35, 35, -35, 35 )
+
+[sub_resource type="ConvexPolygonShape2D" id=26]
+
+custom_solver_bias = 0.0
+points = Vector2Array( -35, -35, 35, -35, 35, 35, -35, 35 )
+
+[sub_resource type="ConvexPolygonShape2D" id=27]
 
 custom_solver_bias = 0.0
 points = Vector2Array( -35, -35, 35, -35, 35, 35, -35, 35 )
@@ -597,23 +587,6 @@ transform/pos = Vector2( 280, 280 )
 texture = ExtResource( 17 )
 offset = Vector2( 65, 0 )
 
-[node name="StaticBody2D" type="StaticBody2D" parent="grassLedgeLeft"]
-
-transform/pos = Vector2( 0, -0.142395 )
-input/pickable = false
-shapes/0/shape = SubResource( 24 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
-shapes/0/trigger = false
-shapes/1/shape = SubResource( 25 )
-shapes/1/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
-shapes/1/trigger = false
-collision/layers = 1
-collision/mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
 [node name="grassLedgeRight" type="Sprite" parent="."]
 
 transform/pos = Vector2( 420.158, 280 )
@@ -622,7 +595,7 @@ texture = ExtResource( 18 )
 [node name="StaticBody2D" type="StaticBody2D" parent="grassLedgeRight"]
 
 input/pickable = false
-shapes/0/shape = SubResource( 26 )
+shapes/0/shape = SubResource( 28 )
 shapes/0/transform = Matrix32( 5.06162, 0, 0, 1, 115.649, 0 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -640,7 +613,7 @@ texture = ExtResource( 19 )
 [node name="StaticBody2D" type="StaticBody2D" parent="grassLeft"]
 
 input/pickable = false
-shapes/0/shape = SubResource( 27 )
+shapes/0/shape = SubResource( 29 )
 shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -665,7 +638,7 @@ texture = ExtResource( 20 )
 [node name="StaticBody2D" type="StaticBody2D" parent="grassMid"]
 
 input/pickable = false
-shapes/0/shape = SubResource( 28 )
+shapes/0/shape = SubResource( 26 )
 shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -690,7 +663,7 @@ texture = ExtResource( 21 )
 [node name="StaticBody2D" type="StaticBody2D" parent="grassMid1"]
 
 input/pickable = false
-shapes/0/shape = SubResource( 29 )
+shapes/0/shape = SubResource( 27 )
 shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
 shapes/0/trigger = false
 collision/layers = 1
