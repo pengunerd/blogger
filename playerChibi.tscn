@@ -15,12 +15,12 @@
 [sub_resource type="RayShape2D" id=1]
 
 custom_solver_bias = 0.5
-length = 20.0
+length = 33.2871
 
 [sub_resource type="ConvexPolygonShape2D" id=16]
 
 custom_solver_bias = 0.0
-points = Vector2Array( -1.11966, 51.5213, -38.4022, -51.0057, 39.3893, -51.3641 )
+points = Vector2Array( 0.862793, 6.59331, -29.3732, -50.9525, 27.685, -50.9525 )
 
 [sub_resource type="ColorRamp" id=3]
 
@@ -82,7 +82,7 @@ step = 0.25
 
 resource/name = "run_chibi"
 length = 2.1
-loop = false
+loop = true
 step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("sprite_chibi:texture")
@@ -132,10 +132,10 @@ samples/shoot = {
 
 input/pickable = false
 shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1.76469, 0.291992, -12.1587 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1.31883, 0.291992, -14.7571 )
 shapes/0/trigger = false
 shapes/1/shape = SubResource( 16 )
-shapes/1/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/1/transform = Matrix32( 1, 0, 0, 1, 0.48764, 17.0687 )
 shapes/1/trigger = false
 collision/layers = 1
 collision/mask = 1
@@ -158,6 +158,7 @@ script/script = ExtResource( 1 )
 
 [node name="sprite_chibi" type="Sprite" parent="."]
 
+transform/scale = Vector2( 0.66, 0.66 )
 texture = ExtResource( 2 )
 
 [node name="smoke" type="Particles2D" parent="sprite_chibi"]
@@ -216,7 +217,7 @@ autoplay = ""
 
 [node name="camera" type="Camera2D" parent="."]
 
-transform/pos = Vector2( -0.345352, -3.19569 )
+transform/pos = Vector2( 0.142349, -3.19569 )
 transform/scale = Vector2( 1.85205, 1.81703 )
 anchor_mode = 1
 rotating = false
@@ -241,8 +242,8 @@ transform/pos = Vector2( 31.2428, 4.08784 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 
-transform/pos = Vector2( 0.291992, -12.1587 )
-transform/scale = Vector2( 1, 1.76469 )
+transform/pos = Vector2( 0.291992, -14.7571 )
+transform/scale = Vector2( 1, 1.31883 )
 shape = SubResource( 1 )
 trigger = false
 _update_shape_index = 0
@@ -266,8 +267,9 @@ default/chorus_send = 0.0
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 
+transform/pos = Vector2( 0.48764, 17.0687 )
 build_mode = 0
-polygon = Vector2Array( -1.11966, 51.5213, -38.4022, -51.0057, 39.3893, -51.3641 )
+polygon = Vector2Array( 0.862793, 6.59331, -29.3732, -50.9525, 27.685, -50.9525 )
 shape_range = Vector2( 1, 1 )
 trigger = false
 
