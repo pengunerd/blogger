@@ -595,6 +595,7 @@ trigger = false
 
 transform/pos = Vector2( 280, 280 )
 texture = ExtResource( 17 )
+offset = Vector2( 65, 0 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="grassLedgeLeft"]
 
@@ -613,13 +614,6 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="grassLedgeLeft/StaticBody2D"]
-
-build_mode = 0
-polygon = Vector2Array( -2.44211, -12.5832, 2.68414, -12.5832, 2.68414, 13.048, -2.86929, -0.621979, -2.44211, -1.47635 )
-shape_range = Vector2( 0, 1 )
-trigger = false
-
 [node name="grassLedgeRight" type="Sprite" parent="."]
 
 transform/pos = Vector2( 420.158, 280 )
@@ -637,15 +631,6 @@ constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="grassLedgeRight/StaticBody2D"]
-
-transform/pos = Vector2( 115.649, 0 )
-transform/scale = Vector2( 5.06162, 1 )
-build_mode = 0
-polygon = Vector2Array( -23.5242, -11.9527, -22.3009, -11.9642, -22.3321, -1.7085, -23.2673, 11.545, -23.4543, 10.9138 )
-shape_range = Vector2( 0, 0 )
-trigger = false
 
 [node name="grassLeft" type="Sprite" parent="."]
 
