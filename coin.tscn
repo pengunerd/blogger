@@ -111,6 +111,8 @@ colors = ColorArray( 1, 1, 1, 1, 0, 0, 0, 1 )
 
 [node name="coin" type="Area2D"]
 
+transform/pos = Vector2( -6.2989, -8.90209 )
+transform/scale = Vector2( 1.19684, 1.27819 )
 input/pickable = true
 shapes/0/shape = SubResource( 1 )
 shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
@@ -125,6 +127,7 @@ script/script = ExtResource( 1 )
 
 texture = ExtResource( 2 )
 hframes = 4
+frame = 2
 
 [node name="anim" type="AnimationPlayer" parent="."]
 
