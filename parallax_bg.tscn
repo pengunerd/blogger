@@ -73,13 +73,13 @@ centered = false
 
 [node name="mount_ 2" type="ParallaxLayer" parent="."]
 
-visibility/visible = false
 motion/scale = Vector2( 0.2, 1 )
 motion/offset = Vector2( 0, 0 )
 motion/mirroring = Vector2( 800, 0 )
 
 [node name="Sprite" type="Sprite" parent="mount_ 2"]
 
+visibility/visible = false
 transform/pos = Vector2( 0, 225 )
 texture = ExtResource( 7 )
 centered = false
@@ -88,6 +88,7 @@ region_rect = Rect2( 0, 0, 800, 256 )
 
 [node name="mount_1" type="ParallaxLayer" parent="."]
 
+transform/pos = Vector2( -2.45544, 23.327 )
 motion/scale = Vector2( 0.4, 1 )
 motion/offset = Vector2( 0, 0 )
 motion/mirroring = Vector2( 800, 0 )

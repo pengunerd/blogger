@@ -17,7 +17,7 @@
 custom_solver_bias = 0.5
 length = 33.2871
 
-[sub_resource type="ConvexPolygonShape2D" id=16]
+[sub_resource type="ConvexPolygonShape2D" id=2]
 
 custom_solver_bias = 0.0
 points = Vector2Array( 0.862793, 6.59331, -29.3732, -50.9525, 27.685, -50.9525 )
@@ -134,7 +134,7 @@ input/pickable = false
 shapes/0/shape = SubResource( 1 )
 shapes/0/transform = Matrix32( 1, 0, 0, 1.31883, 0.291992, -14.7571 )
 shapes/0/trigger = false
-shapes/1/shape = SubResource( 16 )
+shapes/1/shape = SubResource( 2 )
 shapes/1/transform = Matrix32( 1, 0, 0, 1, 0.48764, 17.0687 )
 shapes/1/trigger = false
 collision/layers = 1
@@ -217,8 +217,9 @@ autoplay = ""
 
 [node name="camera" type="Camera2D" parent="."]
 
-transform/pos = Vector2( 0.142349, -3.19569 )
+transform/pos = Vector2( 0.142334, 2.34448 )
 transform/scale = Vector2( 1.85205, 1.81703 )
+offset = Vector2( 0, -50 )
 anchor_mode = 1
 rotating = false
 current = true
