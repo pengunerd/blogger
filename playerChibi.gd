@@ -36,7 +36,7 @@ var WALK_ACCEL = 800.0
 var WALK_DEACCEL = 800.0
 var WALK_MAX_VELOCITY = 400.0
 var AIR_ACCEL = 200.0
-var AIR_DEACCEL = 600.0 #200 originally, changes jumping fall arc
+var AIR_DEACCEL = 1200.0 #200 originally, changes jumping fall arc
 var JUMP_VELOCITY = 560
 var STOP_JUMP_FORCE = 900.0
 
