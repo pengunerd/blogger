@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=1]
+[gd_scene load_steps=12 format=1]
 
 [ext_resource path="res://tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://basepack_grass_noOFFSET.xml" type="TileSet" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://ElephantPrelude2.ogg" type="AudioStream" id=8]
 [ext_resource path="res://enemy.tscn" type="PackedScene" id=9]
 [ext_resource path="res://parallax_bg.tscn" type="PackedScene" id=10]
+[ext_resource path="res://mail.tscn" type="PackedScene" id=11]
 
 [node name="stage" type="Node"]
 
@@ -309,6 +310,8 @@ stream/buffering_ms = 500
 
 [node name="enemies" type="Node" parent="."]
 
+editor/display_folded = true
+
 [node name="enemy 5" parent="enemies" instance=ExtResource( 9 )]
 
 transform/pos = Vector2( 1056.21, 1397.71 )
@@ -390,5 +393,19 @@ drag_margin/left = 0.2
 drag_margin/top = 0.2
 drag_margin/right = 0.2
 drag_margin/bottom = 0.2
+
+[node name="mail" type="Node" parent="."]
+
+[node name="mail" parent="mail" instance=ExtResource( 11 )]
+
+transform/pos = Vector2( 285.822, 1335.52 )
+
+[node name="mail1" parent="mail" instance=ExtResource( 11 )]
+
+transform/pos = Vector2( 387.821, 1341.52 )
+
+[node name="mail2" parent="mail" instance=ExtResource( 11 )]
+
+transform/pos = Vector2( 332.822, 1401.52 )
 
 
