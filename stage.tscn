@@ -297,7 +297,7 @@ transform/pos = Vector2( 8929.98, 1572.71 )
 
 [node name="player" parent="." instance=ExtResource( 7 )]
 
-transform/pos = Vector2( 2214.09, 1474.38 )
+transform/pos = Vector2( 8724.61, 1309.99 )
 gravity_scale = 1.1
 
 [node name="music" type="StreamPlayer" parent="."]
@@ -398,6 +398,8 @@ drag_margin/right = 0.2
 drag_margin/bottom = 0.2
 
 [node name="mail" type="Node" parent="."]
+
+editor/display_folded = true
 
 [node name="mail" parent="mail" instance=ExtResource( 11 )]
 
