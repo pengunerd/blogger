@@ -1,16 +1,17 @@
-[gd_scene load_steps=12 format=1]
+[gd_scene load_steps=13 format=1]
 
 [ext_resource path="res://tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://basepack_grass_noOFFSET.xml" type="TileSet" id=2]
-[ext_resource path="res://coin.tscn" type="PackedScene" id=3]
-[ext_resource path="res://moving_platform.tscn" type="PackedScene" id=4]
-[ext_resource path="res://seesaw.tscn" type="PackedScene" id=5]
-[ext_resource path="res://one_way_platform.tscn" type="PackedScene" id=6]
-[ext_resource path="res://playerChibi.tscn" type="PackedScene" id=7]
-[ext_resource path="res://ElephantPrelude2.ogg" type="AudioStream" id=8]
-[ext_resource path="res://enemy.tscn" type="PackedScene" id=9]
-[ext_resource path="res://parallax_bg.tscn" type="PackedScene" id=10]
-[ext_resource path="res://mail.tscn" type="PackedScene" id=11]
+[ext_resource path="res://bg_trees_tileset.xml" type="TileSet" id=3]
+[ext_resource path="res://coin.tscn" type="PackedScene" id=4]
+[ext_resource path="res://moving_platform.tscn" type="PackedScene" id=5]
+[ext_resource path="res://seesaw.tscn" type="PackedScene" id=6]
+[ext_resource path="res://one_way_platform.tscn" type="PackedScene" id=7]
+[ext_resource path="res://playerChibi.tscn" type="PackedScene" id=8]
+[ext_resource path="res://ElephantPrelude2.ogg" type="AudioStream" id=9]
+[ext_resource path="res://enemy.tscn" type="PackedScene" id=10]
+[ext_resource path="res://parallax_bg.tscn" type="PackedScene" id=11]
+[ext_resource path="res://mail.tscn" type="PackedScene" id=12]
 
 [node name="stage" type="Node"]
 
@@ -55,191 +56,209 @@ __meta__ = {
 "_edit_lock_": true
 }
 
+[node name="bg_trees" type="TileMap" parent="."]
+
+mode = 0
+tile_set = ExtResource( 3 )
+cell/size = Vector2( 70, 70 )
+cell/quadrant_size = 16
+cell/custom_transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+cell/half_offset = 2
+cell/tile_origin = 0
+cell/y_sort = false
+collision/use_kinematic = false
+collision/friction = 1.0
+collision/bounce = 0.0
+collision/layers = 1
+collision/mask = 1
+occluder/light_mask = 1
+tile_data = IntArray(  )
+
 [node name="coins" type="Node" parent="."]
 
 editor/display_folded = true
 
-[node name="coin" parent="coins" instance=ExtResource( 3 )]
+[node name="coin" parent="coins" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 705.149, 1208.47 )
 
-[node name="coin 2" parent="coins" instance=ExtResource( 3 )]
+[node name="coin 2" parent="coins" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 1121.43, 1096.74 )
 
-[node name="coin 3" parent="coins" instance=ExtResource( 3 )]
+[node name="coin 3" parent="coins" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 902.972, 1151.99 )
 
-[node name="coin 4" parent="coins" instance=ExtResource( 3 )]
+[node name="coin 4" parent="coins" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 3318.9, 1153.64 )
 
-[node name="coin 5" parent="coins" instance=ExtResource( 3 )]
+[node name="coin 5" parent="coins" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 4163.64, 1246.14 )
 
-[node name="coin 6" parent="coins" instance=ExtResource( 3 )]
+[node name="coin 6" parent="coins" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 3927.99, 1263.33 )
 
-[node name="coin 7" parent="coins" instance=ExtResource( 3 )]
+[node name="coin 7" parent="coins" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 2846.44, 1209.31 )
 
-[node name="coin 8" parent="coins" instance=ExtResource( 3 )]
+[node name="coin 8" parent="coins" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 2704.1, 1130.73 )
 
-[node name="coin 9" parent="coins" instance=ExtResource( 3 )]
+[node name="coin 9" parent="coins" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 1568, 864 )
 
-[node name="coin 10" parent="coins" instance=ExtResource( 3 )]
+[node name="coin 10" parent="coins" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 1632, 864 )
 
-[node name="coin 11" parent="coins" instance=ExtResource( 3 )]
+[node name="coin 11" parent="coins" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 1824, 768 )
 
-[node name="coin 12" parent="coins" instance=ExtResource( 3 )]
+[node name="coin 12" parent="coins" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 1888, 768 )
 
-[node name="coin 13" parent="coins" instance=ExtResource( 3 )]
+[node name="coin 13" parent="coins" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 2080, 672 )
 
-[node name="coin 14" parent="coins" instance=ExtResource( 3 )]
+[node name="coin 14" parent="coins" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 2144, 672 )
 
-[node name="coin 15" parent="coins" instance=ExtResource( 3 )]
+[node name="coin 15" parent="coins" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 1574.8, 1299.34 )
 
-[node name="coin 16" parent="coins" instance=ExtResource( 3 )]
+[node name="coin 16" parent="coins" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 1651.08, 1383.16 )
 
-[node name="coin 17" parent="coins" instance=ExtResource( 3 )]
+[node name="coin 17" parent="coins" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 2391.45, 1217.31 )
 
-[node name="coin 18" parent="coins" instance=ExtResource( 3 )]
+[node name="coin 18" parent="coins" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 1740.75, 1109.11 )
 
-[node name="coin 19" parent="coins" instance=ExtResource( 3 )]
+[node name="coin 19" parent="coins" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 2539.85, 1134.89 )
 
-[node name="coin 20" parent="coins" instance=ExtResource( 3 )]
+[node name="coin 20" parent="coins" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 1819.01, 1110.34 )
 
-[node name="coin 21" parent="coins" instance=ExtResource( 3 )]
+[node name="coin 21" parent="coins" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 98.8868, 488.515 )
 
-[node name="coin 22" parent="coins" instance=ExtResource( 3 )]
+[node name="coin 22" parent="coins" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 89.5989, 481.217 )
 
-[node name="coin 23" parent="coins" instance=ExtResource( 3 )]
+[node name="coin 23" parent="coins" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 108.175, 481.217 )
 
-[node name="coin 24" parent="coins" instance=ExtResource( 3 )]
+[node name="coin 24" parent="coins" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 116.136, 469.939 )
 
-[node name="coin 25" parent="coins" instance=ExtResource( 3 )]
+[node name="coin 25" parent="coins" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 117.463, 457.997 )
 
-[node name="coin 26" parent="coins" instance=ExtResource( 3 )]
+[node name="coin 26" parent="coins" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 106.184, 449.373 )
 
-[node name="coin 27" parent="coins" instance=ExtResource( 3 )]
+[node name="coin 27" parent="coins" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 98.2234, 458.661 )
 
-[node name="coin 28" parent="coins" instance=ExtResource( 3 )]
+[node name="coin 28" parent="coins" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 88.272, 448.71 )
 
-[node name="coin 29" parent="coins" instance=ExtResource( 3 )]
+[node name="coin 29" parent="coins" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 79.6476, 457.334 )
 
-[node name="coin 30" parent="coins" instance=ExtResource( 3 )]
+[node name="coin 30" parent="coins" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 82.9647, 468.612 )
 
-[node name="coin 31" parent="coins" instance=ExtResource( 3 )]
+[node name="coin 31" parent="coins" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 3644.5, 865.144 )
 
-[node name="coin 31 2" parent="coins" instance=ExtResource( 3 )]
+[node name="coin 31 2" parent="coins" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 5228.11, 1298.79 )
 
-[node name="coin 31 3" parent="coins" instance=ExtResource( 3 )]
+[node name="coin 31 3" parent="coins" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 6657.04, 1432.66 )
 
-[node name="coin 31 4" parent="coins" instance=ExtResource( 3 )]
+[node name="coin 31 4" parent="coins" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 5295.72, 1365.04 )
 
-[node name="coin 31 5" parent="coins" instance=ExtResource( 3 )]
+[node name="coin 31 5" parent="coins" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 3646.98, 1029.1 )
 
-[node name="coin 31 6" parent="coins" instance=ExtResource( 3 )]
+[node name="coin 31 6" parent="coins" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 3646.55, 948.783 )
 
-[node name="coin 32" parent="coins" instance=ExtResource( 3 )]
+[node name="coin 32" parent="coins" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 4162.11, 1016.71 )
 
-[node name="coin 321 76" parent="coins" instance=ExtResource( 3 )]
+[node name="coin 321 76" parent="coins" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 4167.6, 1355.56 )
 
-[node name="coin 33 7 5" parent="coins" instance=ExtResource( 3 )]
+[node name="coin 33 7 5" parent="coins" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 5157.35, 1227.14 )
 
-[node name="coin 34" parent="coins" instance=ExtResource( 3 )]
+[node name="coin 34" parent="coins" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 4935.1, 1227.15 )
 
-[node name="coin 35" parent="coins" instance=ExtResource( 3 )]
+[node name="coin 35" parent="coins" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 4868.14, 1294.14 )
 
-[node name="coin 36" parent="coins" instance=ExtResource( 3 )]
+[node name="coin 36" parent="coins" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 4162.61, 1123.84 )
 
-[node name="coin 37" parent="coins" instance=ExtResource( 3 )]
+[node name="coin 37" parent="coins" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 4792.96, 1364.76 )
 
-[node name="coin38" parent="coins" instance=ExtResource( 3 )]
+[node name="coin38" parent="coins" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 5816.89, 1428.28 )
 
-[node name="coin39" parent="coins" instance=ExtResource( 3 )]
+[node name="coin39" parent="coins" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 6169.86, 1430.43 )
 
-[node name="coin40" parent="coins" instance=ExtResource( 3 )]
+[node name="coin40" parent="coins" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 2628.32, 1327.85 )
 
@@ -247,62 +266,62 @@ transform/pos = Vector2( 2628.32, 1327.85 )
 
 editor/display_folded = true
 
-[node name="moving_platform" parent="props" instance=ExtResource( 4 )]
+[node name="moving_platform" parent="props" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 3660.5, 1244.56 )
 motion = Vector2( 0, 140 )
 cycle = 5.0
 
-[node name="moving_platform2" parent="props" instance=ExtResource( 4 )]
+[node name="moving_platform2" parent="props" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 7082.02, 1307.32 )
 motion = Vector2( 0, 140 )
 cycle = 7.0
 
-[node name="moving_platform3" parent="props" instance=ExtResource( 4 )]
+[node name="moving_platform3" parent="props" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 7415.17, 1110.63 )
 motion = Vector2( 0, -140 )
 cycle = 7.0
 
-[node name="moving_platform1" parent="props" instance=ExtResource( 4 )]
+[node name="moving_platform1" parent="props" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 7749.83, 1304.83 )
 motion = Vector2( 0, 140 )
 cycle = 7.0
 
-[node name="moving_platform 2" parent="props" instance=ExtResource( 4 )]
+[node name="moving_platform 2" parent="props" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 624.824, 545.544 )
 motion = Vector2( 300, 0 )
 cycle = 10.0
 
-[node name="moving_platform 3" parent="props" instance=ExtResource( 4 )]
+[node name="moving_platform 3" parent="props" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 1445.39, 752.993 )
 motion = Vector2( 450, 0 )
 cycle = 10.0
 
-[node name="seesaw" parent="props" instance=ExtResource( 5 )]
+[node name="seesaw" parent="props" instance=ExtResource( 6 )]
 
 transform/pos = Vector2( 2402.79, 849.52 )
 
-[node name="one_way_platform" parent="props" instance=ExtResource( 6 )]
+[node name="one_way_platform" parent="props" instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 8930.96, 1408.44 )
 
-[node name="one_way_platform1" parent="props" instance=ExtResource( 6 )]
+[node name="one_way_platform1" parent="props" instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 8929.98, 1572.71 )
 
-[node name="player" parent="." instance=ExtResource( 7 )]
+[node name="player" parent="." instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 8724.61, 1309.99 )
 gravity_scale = 1.1
 
 [node name="music" type="StreamPlayer" parent="."]
 
-stream/stream = ExtResource( 8 )
+stream/stream = ExtResource( 9 )
 stream/play = true
 stream/loop = true
 stream/volume_db = 2.0
@@ -315,51 +334,51 @@ stream/buffering_ms = 500
 
 editor/display_folded = true
 
-[node name="enemy 5" parent="enemies" instance=ExtResource( 9 )]
+[node name="enemy 5" parent="enemies" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 1056.21, 1397.71 )
 
-[node name="enemy 6" parent="enemies" instance=ExtResource( 9 )]
+[node name="enemy 6" parent="enemies" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 1184.54, 1465.07 )
 
-[node name="enemy 7" parent="enemies" instance=ExtResource( 9 )]
+[node name="enemy 7" parent="enemies" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 960.334, 1476.85 )
 
-[node name="enemy 8" parent="enemies" instance=ExtResource( 9 )]
+[node name="enemy 8" parent="enemies" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 2621.36, 1451.97 )
 
-[node name="enemy 9" parent="enemies" instance=ExtResource( 9 )]
+[node name="enemy 9" parent="enemies" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 1607.38, 923.239 )
 
-[node name="enemy 10" parent="enemies" instance=ExtResource( 9 )]
+[node name="enemy 10" parent="enemies" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 2586.9, 939.059 )
 
-[node name="enemy 11" parent="enemies" instance=ExtResource( 9 )]
+[node name="enemy 11" parent="enemies" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 1457.6, 688.741 )
 
-[node name="enemy 12" parent="enemies" instance=ExtResource( 9 )]
+[node name="enemy 12" parent="enemies" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 1193.63, 460.381 )
 
-[node name="enemy 13" parent="enemies" instance=ExtResource( 9 )]
+[node name="enemy 13" parent="enemies" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 5053.06, 1180.68 )
 
-[node name="enemy 14" parent="enemies" instance=ExtResource( 9 )]
+[node name="enemy 14" parent="enemies" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 3690.9, 1470.75 )
 
-[node name="enemy 15" parent="enemies" instance=ExtResource( 9 )]
+[node name="enemy 15" parent="enemies" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 2406.63, 815.115 )
 
-[node name="parallax_bg" parent="." instance=ExtResource( 10 )]
+[node name="parallax_bg" parent="." instance=ExtResource( 11 )]
 
 [node name="Label" type="Label" parent="."]
 
@@ -401,59 +420,59 @@ drag_margin/bottom = 0.2
 
 editor/display_folded = true
 
-[node name="mail" parent="mail" instance=ExtResource( 11 )]
+[node name="mail" parent="mail" instance=ExtResource( 12 )]
 
 transform/pos = Vector2( 700.735, 1204.92 )
 
-[node name="mail1" parent="mail" instance=ExtResource( 11 )]
+[node name="mail1" parent="mail" instance=ExtResource( 12 )]
 
 transform/pos = Vector2( 906.122, 1151.07 )
 
-[node name="mail2" parent="mail" instance=ExtResource( 11 )]
+[node name="mail2" parent="mail" instance=ExtResource( 12 )]
 
 transform/pos = Vector2( 1119.12, 1096.8 )
 
-[node name="mail3" parent="mail" instance=ExtResource( 11 )]
+[node name="mail3" parent="mail" instance=ExtResource( 12 )]
 
 transform/pos = Vector2( 1601.42, 1247.39 )
 
-[node name="mail4" parent="mail" instance=ExtResource( 11 )]
+[node name="mail4" parent="mail" instance=ExtResource( 12 )]
 
 transform/pos = Vector2( 1715.53, 1354.87 )
 
-[node name="mail5" parent="mail" instance=ExtResource( 11 )]
+[node name="mail5" parent="mail" instance=ExtResource( 12 )]
 
 transform/pos = Vector2( 2543.48, 1101.44 )
 
-[node name="mail6" parent="mail" instance=ExtResource( 11 )]
+[node name="mail6" parent="mail" instance=ExtResource( 12 )]
 
 transform/pos = Vector2( 2867.89, 1284.54 )
 
-[node name="mail7" parent="mail" instance=ExtResource( 11 )]
+[node name="mail7" parent="mail" instance=ExtResource( 12 )]
 
 transform/pos = Vector2( 3317.89, 1139.54 )
 
-[node name="mail8" parent="mail" instance=ExtResource( 11 )]
+[node name="mail8" parent="mail" instance=ExtResource( 12 )]
 
 transform/pos = Vector2( 3656.88, 1005.55 )
 
-[node name="mail9" parent="mail" instance=ExtResource( 11 )]
+[node name="mail9" parent="mail" instance=ExtResource( 12 )]
 
 transform/pos = Vector2( 3657.88, 860.546 )
 
-[node name="mail10" parent="mail" instance=ExtResource( 11 )]
+[node name="mail10" parent="mail" instance=ExtResource( 12 )]
 
 transform/pos = Vector2( 3663.89, 1437.54 )
 
-[node name="mail11" parent="mail" instance=ExtResource( 11 )]
+[node name="mail11" parent="mail" instance=ExtResource( 12 )]
 
 transform/pos = Vector2( 4187.88, 1070.55 )
 
-[node name="mail12" parent="mail" instance=ExtResource( 11 )]
+[node name="mail12" parent="mail" instance=ExtResource( 12 )]
 
 transform/pos = Vector2( 4191.88, 1167.54 )
 
-[node name="mail13" parent="mail" instance=ExtResource( 11 )]
+[node name="mail13" parent="mail" instance=ExtResource( 12 )]
 
 transform/pos = Vector2( 4193.88, 1268.54 )
 
