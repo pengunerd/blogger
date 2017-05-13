@@ -1,26 +1,38 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<resource_file type="TileSet" subresource_count="49" version="2.1" version_name="Godot Engine v2.1.3.stable.official">
+<resource_file type="TileSet" subresource_count="64" version="2.1" version_name="Godot Engine v2.1.3.stable.official">
+	<ext_resource path="res://basepack_ground_collision/grassCliffRight.png" type="Texture" index="29"></ext_resource>
 	<ext_resource path="res://basepack_ground_collision/grassHillRight2.png" type="Texture" index="7"></ext_resource>
-	<ext_resource path="res://basepack_ground_collision/grassCliffRightAlt.png" type="Texture" index="18"></ext_resource>
-	<ext_resource path="res://basepack_ground_collision/grassLedgeLeft.png" type="Texture" index="8"></ext_resource>
-	<ext_resource path="res://basepack_ground_collision/grassHillLeft.png" type="Texture" index="5"></ext_resource>
-	<ext_resource path="res://basepack_ground_collision/grassCliffLeftAlt.png" type="Texture" index="16"></ext_resource>
-	<ext_resource path="res://basepack_ground_collision/grassCliffLeft.png" type="Texture" index="15"></ext_resource>
 	<ext_resource path="res://basepack_ground_collision/grassRight.png" type="Texture" index="13"></ext_resource>
-	<ext_resource path="res://basepack_ground_collision/grassLeft.png" type="Texture" index="10"></ext_resource>
-	<ext_resource path="res://basepack_ground_collision/grassCliffRight.png" type="Texture" index="17"></ext_resource>
-	<ext_resource path="res://basepack_ground_collision/grassHalfRight.png" type="Texture" index="20"></ext_resource>
+	<ext_resource path="res://basepack_ground_collision/grassCliffLeftAlt.png" type="Texture" index="28"></ext_resource>
+	<ext_resource path="res://basepack_ground_collision/grassHalfRight.png" type="Texture" index="32"></ext_resource>
 	<ext_resource path="res://basepack_ground_collision/grassHalfLeft.png" type="Texture" index="3"></ext_resource>
-	<ext_resource path="res://basepack_ground_collision/grassCenter.png" type="Texture" index="12"></ext_resource>
+	<ext_resource path="res://basepack_ground_collision/grassCliffRightAlt.png" type="Texture" index="30"></ext_resource>
+	<ext_resource path="res://basepack_ground_collision/grassLeft.png" type="Texture" index="10"></ext_resource>
+	<ext_resource path="res://basepack_ground_collision/grassLedgeLeft.png" type="Texture" index="8"></ext_resource>
 	<ext_resource path="res://basepack_ground_collision/grassHalfMid.png" type="Texture" index="2"></ext_resource>
-	<ext_resource path="res://basepack_ground_collision/grassCenter_rounded.png" type="Texture" index="14"></ext_resource>
+	<ext_resource path="res://basepack_ground_collision/grassCliffLeft.png" type="Texture" index="27"></ext_resource>
+	<ext_resource path="res://basepack_ground_collision/grassCenter_rounded.png" type="Texture" index="23"></ext_resource>
 	<ext_resource path="res://basepack_ground_collision/grassHillLeft2.png" type="Texture" index="4"></ext_resource>
-	<ext_resource path="res://basepack_ground_collision/grassHalf.png" type="Texture" index="19"></ext_resource>
-	<ext_resource path="res://basepack_ground_collision/grassHillRight.png" type="Texture" index="6"></ext_resource>
-	<ext_resource path="res://basepack_ground_collision/box.png" type="Texture" index="0"></ext_resource>
-	<ext_resource path="res://basepack_ground_collision/grassLedgeRight.png" type="Texture" index="9"></ext_resource>
-	<ext_resource path="res://basepack_ground_collision/grassMid.png" type="Texture" index="11"></ext_resource>
+	<ext_resource path="res://basepack_ground_collision/grassHillLeft.png" type="Texture" index="5"></ext_resource>
+	<ext_resource path="res://basepack_ground_collision/grassCenter.png" type="Texture" index="12"></ext_resource>
 	<ext_resource path="res://basepack_ground_collision/grass.png" type="Texture" index="1"></ext_resource>
+	<ext_resource path="res://basepack_ground_collision/grassHalf.png" type="Texture" index="31"></ext_resource>
+	<ext_resource path="res://basepack_ground_collision/box.png" type="Texture" index="0"></ext_resource>
+	<ext_resource path="res://basepack_ground_collision/grassMid.png" type="Texture" index="11"></ext_resource>
+	<ext_resource path="res://basepack_ground_collision/grassHillRight.png" type="Texture" index="6"></ext_resource>
+	<ext_resource path="res://basepack_ground_collision/grassLedgeRight.png" type="Texture" index="9"></ext_resource>
+	<ext_resource path="res://basepack_ground_collision/grassHalfBottom.png" type="Texture" index="14"></ext_resource>
+	<ext_resource path="res://basepack_ground_collision/signLeft.png" type="Texture" index="15"></ext_resource>
+	<ext_resource path="res://basepack_ground_collision/liquidWaterTop.png" type="Texture" index="25"></ext_resource>
+	<ext_resource path="res://basepack_ground_collision/liquidWater.png" type="Texture" index="24"></ext_resource>
+	<ext_resource path="res://basepack_ground_collision/hill_large.png" type="Texture" index="19"></ext_resource>
+	<ext_resource path="res://basepack_ground_collision/hill_small.png" type="Texture" index="21"></ext_resource>
+	<ext_resource path="res://basepack_ground_collision/liquidWaterTop_mid.png" type="Texture" index="26"></ext_resource>
+	<ext_resource path="res://basepack_ground_collision/bridge.png" type="Texture" index="18"></ext_resource>
+	<ext_resource path="res://basepack_ground_collision/hill_smallAlt.png" type="Texture" index="22"></ext_resource>
+	<ext_resource path="res://basepack_ground_collision/bridgeLogs.png" type="Texture" index="17"></ext_resource>
+	<ext_resource path="res://basepack_ground_collision/signRight.png" type="Texture" index="16"></ext_resource>
+	<ext_resource path="res://basepack_ground_collision/hill_largeAlt.png" type="Texture" index="20"></ext_resource>
 	<resource type="ConvexPolygonShape2D" path="local://1">
 		<real name="custom_solver_bias"> 0 </real>
 		<vector2_array name="points" len="4"> 			-35, -35, 35, -35, 35, 35, -35, 35 </vector2_array>
@@ -61,12 +73,12 @@
 		<vector2_array name="points" len="4"> 			-35, -35, 35, -35, 35, 35, -35, 35 </vector2_array>
 
 	</resource>
-	<resource type="ConvexPolygonShape2D" path="local://28">
+	<resource type="ConvexPolygonShape2D" path="local://24">
 		<real name="custom_solver_bias"> 0 </real>
 		<vector2_array name="points" len="5"> 			-23.5242, -11.9527, -22.3009, -11.9642, -22.3321, -1.7085, -23.2673, 11.545, -23.4543, 10.9138 </vector2_array>
 
 	</resource>
-	<resource type="ConvexPolygonShape2D" path="local://29">
+	<resource type="ConvexPolygonShape2D" path="local://25">
 		<real name="custom_solver_bias"> 0 </real>
 		<vector2_array name="points" len="4"> 			-35, -35, 35, -35, 35, 35, -35, 35 </vector2_array>
 
@@ -84,6 +96,21 @@
 	<resource type="ConvexPolygonShape2D" path="local://27">
 		<real name="custom_solver_bias"> 0 </real>
 		<vector2_array name="points" len="4"> 			-35, -35, 35, -35, 35, 35, -35, 35 </vector2_array>
+
+	</resource>
+	<resource type="ConvexPolygonShape2D" path="local://28">
+		<real name="custom_solver_bias"> 0 </real>
+		<vector2_array name="points" len="4"> 			-35, -5, 35, -5, 35, 35, -35, 35 </vector2_array>
+
+	</resource>
+	<resource type="ConvexPolygonShape2D" path="local://29">
+		<real name="custom_solver_bias"> 0 </real>
+		<vector2_array name="points" len="8"> 			-35, 15, -30, 10, 30, 10, 35, 15, 35, 30, 30, 35, -30, 35, -35, 30 </vector2_array>
+
+	</resource>
+	<resource type="ConvexPolygonShape2D" path="local://30">
+		<real name="custom_solver_bias"> 0 </real>
+		<vector2_array name="points" len="8"> 			-30, 15, 30, 15, 35, 20, 35, 30, 30, 35, -30, 35, -35, 30, -35, 20 </vector2_array>
 
 	</resource>
 	<resource type="ConvexPolygonShape2D" path="local://4">
@@ -191,7 +218,7 @@
 			<resource  resource_type="Shape2D" path="local://3">  </resource>
 		</array>
 		<string name="3/name"> "grassCenter_rounded" </string>
-		<resource name="3/texture" external="14">  </resource>
+		<resource name="3/texture" external="23">  </resource>
 		<vector2 name="3/tex_offset"> 0, 0 </vector2>
 		<resource name="3/material"></resource>		<color name="3/modulate"> 1, 1, 1, 1 </color>
 		<rect2 name="3/region"> 0, 0, 70, 70 </rect2>
@@ -202,7 +229,7 @@
 			<resource  resource_type="Shape2D" path="local://4">  </resource>
 		</array>
 		<string name="4/name"> "grassCliffLeft" </string>
-		<resource name="4/texture" external="15">  </resource>
+		<resource name="4/texture" external="27">  </resource>
 		<vector2 name="4/tex_offset"> 0, 0 </vector2>
 		<resource name="4/material"></resource>		<color name="4/modulate"> 1, 1, 1, 1 </color>
 		<rect2 name="4/region"> 0, 0, 70, 70 </rect2>
@@ -213,7 +240,7 @@
 			<resource  resource_type="Shape2D" path="local://5">  </resource>
 		</array>
 		<string name="5/name"> "grassCliffLeftAlt" </string>
-		<resource name="5/texture" external="16">  </resource>
+		<resource name="5/texture" external="28">  </resource>
 		<vector2 name="5/tex_offset"> 0, 0 </vector2>
 		<resource name="5/material"></resource>		<color name="5/modulate"> 1, 1, 1, 1 </color>
 		<rect2 name="5/region"> 0, 0, 70, 70 </rect2>
@@ -227,7 +254,7 @@
 			<resource  resource_type="Shape2D" path="local://9">  </resource>
 		</array>
 		<string name="6/name"> "grassCliffRight" </string>
-		<resource name="6/texture" external="17">  </resource>
+		<resource name="6/texture" external="29">  </resource>
 		<vector2 name="6/tex_offset"> 0, 0 </vector2>
 		<resource name="6/material"></resource>		<color name="6/modulate"> 1, 1, 1, 1 </color>
 		<rect2 name="6/region"> 0, 0, 70, 70 </rect2>
@@ -238,7 +265,7 @@
 			<resource  resource_type="Shape2D" path="local://10">  </resource>
 		</array>
 		<string name="7/name"> "grassCliffRightAlt" </string>
-		<resource name="7/texture" external="18">  </resource>
+		<resource name="7/texture" external="30">  </resource>
 		<vector2 name="7/tex_offset"> 0, 0 </vector2>
 		<resource name="7/material"></resource>		<color name="7/modulate"> 1, 1, 1, 1 </color>
 		<rect2 name="7/region"> 0, 0, 70, 70 </rect2>
@@ -253,7 +280,7 @@
 			<resource  resource_type="Shape2D" path="local://15">  </resource>
 		</array>
 		<string name="8/name"> "grassHalf" </string>
-		<resource name="8/texture" external="19">  </resource>
+		<resource name="8/texture" external="31">  </resource>
 		<vector2 name="8/tex_offset"> 0, 0 </vector2>
 		<resource name="8/material"></resource>		<color name="8/modulate"> 1, 1, 1, 1 </color>
 		<rect2 name="8/region"> 0, 0, 70, 70 </rect2>
@@ -264,7 +291,7 @@
 			<resource  resource_type="Shape2D" path="local://16">  </resource>
 		</array>
 		<string name="9/name"> "grassHalfRight" </string>
-		<resource name="9/texture" external="20">  </resource>
+		<resource name="9/texture" external="32">  </resource>
 		<vector2 name="9/tex_offset"> 0, 0 </vector2>
 		<resource name="9/material"></resource>		<color name="9/modulate"> 1, 1, 1, 1 </color>
 		<rect2 name="9/region"> 0, 0, 70, 70 </rect2>
@@ -359,7 +386,7 @@
 		<resource name="17/occluder"></resource>		<vector2 name="17/navigation_offset"> 2.5, 12 </vector2>
 		<resource name="17/navigation"></resource>		<vector2 name="17/shape_offset"> 2.5, 12 </vector2>
 		<array name="17/shapes" len="1" shared="false">
-			<resource  resource_type="Shape2D" path="local://28">  </resource>
+			<resource  resource_type="Shape2D" path="local://24">  </resource>
 		</array>
 		<string name="18/name"> "grassLeft" </string>
 		<resource name="18/texture" external="10">  </resource>
@@ -370,7 +397,7 @@
 		<resource name="18/occluder"></resource>		<vector2 name="18/navigation_offset"> 35, 35 </vector2>
 		<resource name="18/navigation"></resource>		<vector2 name="18/shape_offset"> 35, 35 </vector2>
 		<array name="18/shapes" len="1" shared="false">
-			<resource  resource_type="Shape2D" path="local://29">  </resource>
+			<resource  resource_type="Shape2D" path="local://25">  </resource>
 		</array>
 		<string name="19/name"> "grassMid" </string>
 		<resource name="19/texture" external="11">  </resource>
@@ -393,6 +420,129 @@
 		<resource name="20/navigation"></resource>		<vector2 name="20/shape_offset"> 35, 35 </vector2>
 		<array name="20/shapes" len="1" shared="false">
 			<resource  resource_type="Shape2D" path="local://27">  </resource>
+		</array>
+		<string name="21/name"> "grassHalfMidBot" </string>
+		<resource name="21/texture" external="14">  </resource>
+		<vector2 name="21/tex_offset"> 0, 0 </vector2>
+		<resource name="21/material"></resource>		<color name="21/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="21/region"> 0, 0, 70, 70 </rect2>
+		<vector2 name="21/occluder_offset"> 35, 35 </vector2>
+		<resource name="21/occluder"></resource>		<vector2 name="21/navigation_offset"> 35, 35 </vector2>
+		<resource name="21/navigation"></resource>		<vector2 name="21/shape_offset"> 35, 35 </vector2>
+		<array name="21/shapes" len="1" shared="false">
+			<resource  resource_type="Shape2D" path="local://28">  </resource>
+		</array>
+		<string name="22/name"> "bg_signLeft" </string>
+		<resource name="22/texture" external="15">  </resource>
+		<vector2 name="22/tex_offset"> 0, 0 </vector2>
+		<resource name="22/material"></resource>		<color name="22/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="22/region"> 0, 0, 70, 70 </rect2>
+		<vector2 name="22/occluder_offset"> 35, 35 </vector2>
+		<resource name="22/occluder"></resource>		<vector2 name="22/navigation_offset"> 35, 35 </vector2>
+		<resource name="22/navigation"></resource>		<vector2 name="22/shape_offset"> 0, 0 </vector2>
+		<array name="22/shapes" len="0" shared="false">
+		</array>
+		<string name="23/name"> "bg_signRight" </string>
+		<resource name="23/texture" external="16">  </resource>
+		<vector2 name="23/tex_offset"> 0, 0 </vector2>
+		<resource name="23/material"></resource>		<color name="23/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="23/region"> 0, 0, 70, 70 </rect2>
+		<vector2 name="23/occluder_offset"> 35, 35 </vector2>
+		<resource name="23/occluder"></resource>		<vector2 name="23/navigation_offset"> 35, 35 </vector2>
+		<resource name="23/navigation"></resource>		<vector2 name="23/shape_offset"> 0, 0 </vector2>
+		<array name="23/shapes" len="0" shared="false">
+		</array>
+		<string name="24/name"> "bridge_logs" </string>
+		<resource name="24/texture" external="17">  </resource>
+		<vector2 name="24/tex_offset"> 0, 0 </vector2>
+		<resource name="24/material"></resource>		<color name="24/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="24/region"> 0, 0, 70, 70 </rect2>
+		<vector2 name="24/occluder_offset"> 35, 35 </vector2>
+		<resource name="24/occluder"></resource>		<vector2 name="24/navigation_offset"> 35, 35 </vector2>
+		<resource name="24/navigation"></resource>		<vector2 name="24/shape_offset"> 35, 35 </vector2>
+		<array name="24/shapes" len="1" shared="false">
+			<resource  resource_type="Shape2D" path="local://29">  </resource>
+		</array>
+		<string name="25/name"> "bridge" </string>
+		<resource name="25/texture" external="18">  </resource>
+		<vector2 name="25/tex_offset"> 0, 0 </vector2>
+		<resource name="25/material"></resource>		<color name="25/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="25/region"> 0, 0, 70, 70 </rect2>
+		<vector2 name="25/occluder_offset"> 35, 35 </vector2>
+		<resource name="25/occluder"></resource>		<vector2 name="25/navigation_offset"> 35, 35 </vector2>
+		<resource name="25/navigation"></resource>		<vector2 name="25/shape_offset"> 35, 35 </vector2>
+		<array name="25/shapes" len="1" shared="false">
+			<resource  resource_type="Shape2D" path="local://30">  </resource>
+		</array>
+		<string name="26/name"> "bg_hill_large" </string>
+		<resource name="26/texture" external="19">  </resource>
+		<vector2 name="26/tex_offset"> 0, 0 </vector2>
+		<resource name="26/material"></resource>		<color name="26/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="26/region"> 0, 0, 48, 146 </rect2>
+		<vector2 name="26/occluder_offset"> 24, 73 </vector2>
+		<resource name="26/occluder"></resource>		<vector2 name="26/navigation_offset"> 24, 73 </vector2>
+		<resource name="26/navigation"></resource>		<vector2 name="26/shape_offset"> 0, 0 </vector2>
+		<array name="26/shapes" len="0" shared="false">
+		</array>
+		<string name="27/name"> "bg_hill_large_alt" </string>
+		<resource name="27/texture" external="20">  </resource>
+		<vector2 name="27/tex_offset"> 0, 0 </vector2>
+		<resource name="27/material"></resource>		<color name="27/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="27/region"> 0, 0, 48, 146 </rect2>
+		<vector2 name="27/occluder_offset"> 24, 73 </vector2>
+		<resource name="27/occluder"></resource>		<vector2 name="27/navigation_offset"> 24, 73 </vector2>
+		<resource name="27/navigation"></resource>		<vector2 name="27/shape_offset"> 0, 0 </vector2>
+		<array name="27/shapes" len="0" shared="false">
+		</array>
+		<string name="28/name"> "bg_hill_small" </string>
+		<resource name="28/texture" external="21">  </resource>
+		<vector2 name="28/tex_offset"> 0, 0 </vector2>
+		<resource name="28/material"></resource>		<color name="28/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="28/region"> 0, 0, 48, 106 </rect2>
+		<vector2 name="28/occluder_offset"> 24, 53 </vector2>
+		<resource name="28/occluder"></resource>		<vector2 name="28/navigation_offset"> 24, 53 </vector2>
+		<resource name="28/navigation"></resource>		<vector2 name="28/shape_offset"> 0, 0 </vector2>
+		<array name="28/shapes" len="0" shared="false">
+		</array>
+		<string name="29/name"> "bg_hill_small_alt" </string>
+		<resource name="29/texture" external="22">  </resource>
+		<vector2 name="29/tex_offset"> 0, 0 </vector2>
+		<resource name="29/material"></resource>		<color name="29/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="29/region"> 0, 0, 48, 106 </rect2>
+		<vector2 name="29/occluder_offset"> 24, 53 </vector2>
+		<resource name="29/occluder"></resource>		<vector2 name="29/navigation_offset"> 24, 53 </vector2>
+		<resource name="29/navigation"></resource>		<vector2 name="29/shape_offset"> 0, 0 </vector2>
+		<array name="29/shapes" len="0" shared="false">
+		</array>
+		<string name="30/name"> "bg_liquid_water" </string>
+		<resource name="30/texture" external="24">  </resource>
+		<vector2 name="30/tex_offset"> 0, 0 </vector2>
+		<resource name="30/material"></resource>		<color name="30/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="30/region"> 0, 0, 70, 70 </rect2>
+		<vector2 name="30/occluder_offset"> 35, 35 </vector2>
+		<resource name="30/occluder"></resource>		<vector2 name="30/navigation_offset"> 35, 35 </vector2>
+		<resource name="30/navigation"></resource>		<vector2 name="30/shape_offset"> 0, 0 </vector2>
+		<array name="30/shapes" len="0" shared="false">
+		</array>
+		<string name="31/name"> "bg_liquid_water_top" </string>
+		<resource name="31/texture" external="25">  </resource>
+		<vector2 name="31/tex_offset"> 0, 0 </vector2>
+		<resource name="31/material"></resource>		<color name="31/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="31/region"> 0, 0, 70, 70 </rect2>
+		<vector2 name="31/occluder_offset"> 35, 35 </vector2>
+		<resource name="31/occluder"></resource>		<vector2 name="31/navigation_offset"> 35, 35 </vector2>
+		<resource name="31/navigation"></resource>		<vector2 name="31/shape_offset"> 0, 0 </vector2>
+		<array name="31/shapes" len="0" shared="false">
+		</array>
+		<string name="32/name"> "bg_liquid_water_topMid" </string>
+		<resource name="32/texture" external="26">  </resource>
+		<vector2 name="32/tex_offset"> 0, 0 </vector2>
+		<resource name="32/material"></resource>		<color name="32/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="32/region"> 0, 0, 70, 70 </rect2>
+		<vector2 name="32/occluder_offset"> 35, 35 </vector2>
+		<resource name="32/occluder"></resource>		<vector2 name="32/navigation_offset"> 35, 35 </vector2>
+		<resource name="32/navigation"></resource>		<vector2 name="32/shape_offset"> 0, 0 </vector2>
+		<array name="32/shapes" len="0" shared="false">
 		</array>
 
 	</main_resource>

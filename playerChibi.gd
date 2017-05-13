@@ -205,8 +205,11 @@ func _integrate_forces(s):
 	if (new_siding_left != siding_left):
 		if (new_siding_left):
 			get_node("sprite_chibi").set_scale(Vector2(-.66, .66))
+			#flip when moving left
+			#get_node("sprite_chibi").set_flip_h(true) 
 		else:
 			get_node("sprite_chibi").set_scale(Vector2(.66, .66))
+			#get_node("sprite_chibi").set_flip_h(false)
 		
 		siding_left = new_siding_left
 	

@@ -165,7 +165,7 @@ texture = ExtResource( 2 )
 
 visibility/self_opacity = 0.363636
 visibility/blend_mode = 1
-transform/pos = Vector2( 81.2567, 1.51966 )
+transform/pos = Vector2( 62.7895, 4.87733 )
 transform/rot = 83.4504
 config/amount = 4
 config/lifetime = 0.3
