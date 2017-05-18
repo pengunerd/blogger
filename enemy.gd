@@ -26,7 +26,6 @@ func _pre_explode():
 	clear_shapes()
 	set_mode(MODE_STATIC)
 	get_node("sound").play("explode")
-	
 
 
 func _integrate_forces(s):
@@ -53,8 +52,6 @@ func _integrate_forces(s):
 					set_friction(1)
 					cc.disable()
 					get_node("sound").play("hit")
-					# decrement enemy counter
-					get_node("/root/game_state").enemy_score-=1
 					break
 			
 			if (dp.x > 0.9):

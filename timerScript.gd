@@ -17,7 +17,4 @@ func _process(delta):
 	print("elapsed : ", str_elapsed)
 	#set_text("Time : " + str_elapsed)
 	set_text(str_elapsed)
-	# mail counter - increases 
 	get_node("../mail_counter").set_text(str(get_node("/root/game_state").mail_score))
-	# enemy counter - decreases on kill
-	get_node("../enemy_counter").set_text(str(get_node("/root/game_state").enemy_score))
