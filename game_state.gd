@@ -3,7 +3,7 @@ extends Node
 
 # Member variables
 var mail_score = 0
-var max_points = 0
+var enemy_score = 20
 
 
 func _ready():
