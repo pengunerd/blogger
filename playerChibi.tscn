@@ -434,6 +434,7 @@ transform/pos = Vector2( 1380.7, 103.414 )
 transform/scale = Vector2( 2, 2 )
 frames = SubResource( 16 )
 animation = "label_mail"
+frame = 1
 playing = true
 
 [node name="label_enemy_animation" type="AnimationPlayer" parent="hud"]
