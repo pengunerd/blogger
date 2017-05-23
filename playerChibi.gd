@@ -51,6 +51,7 @@ var bullet = preload("res://bullet.tscn")
 
 var floor_h_velocity = 0.0
 var enemy
+var chibi_pos
 
 
 func _integrate_forces(s):
@@ -66,6 +67,10 @@ func _integrate_forces(s):
 	var jump = Input.is_action_pressed("jump")
 	var shoot = Input.is_action_pressed("shoot")
 	var spawn = Input.is_action_pressed("spawn")
+	
+	#if is_colliding():	# colliding with Static, Kinematic, Rigid
+		# do something
+		#print ("Collision with ", get_collider() )
 	
 	if spawn:
 		var e = enemy.instance()
@@ -107,6 +112,12 @@ func _integrate_forces(s):
 		get_node("sprite_chibi/smoke").set_emitting(true)
 		get_node("sound").play("shoot")
 		PS2D.body_add_collision_exception(bi.get_rid(), get_rid()) # Make bullet and this not collide
+		
+		
+		
+		#print(bodies.size())
+		#self.apply_impulse(Vector2(0,0),Vector2(-1500,0))
+		#print(self.get_linear_velocity())
 	else:
 		shoot_time += step
 	
@@ -229,9 +240,35 @@ func _integrate_forces(s):
 	lv += s.get_total_gravity()*step
 	s.set_linear_velocity(lv)
 
+func _on_player_body_enter(body):
+	print("Body entered the area")
+	var bodies = get_colliding_bodies()
+	for test in bodies:
+		if (test.get_name()=="distraction"):
+			print("DISTRACTION DETECTED")
+			self.apply_impulse(Vector2(0,0),Vector2(-50000,10))
+	#print(chibi_pos)
+
+
+
+func _body_enter(body):
+	print("hello")
+	
 
 func _ready():
 	enemy = ResourceLoader.load("res://enemy.tscn")
+	connect("body_enter", self, "on_player_body_enter")
+	set_contact_monitor(true)
+	set_max_contacts_reported(20)
+	set_process(true)
+	var start_pos = get_pos()
+	print(start_pos)
+
+func _process(delta):
+	chibi_pos = get_node("sprite_chibi").get_global_pos()
+	
+	#print(chibi_pos)
+
 	
 #	if !Globals.has_singleton("Facebook"):
 #		return

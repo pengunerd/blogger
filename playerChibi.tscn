@@ -178,7 +178,7 @@ bounce = 0.0
 gravity_scale = 1.0
 custom_integrator = true
 continuous_cd = 0
-contacts_reported = 3
+contacts_reported = 0
 contact_monitor = false
 sleeping = false
 can_sleep = true
@@ -434,7 +434,7 @@ transform/pos = Vector2( 1380.7, 103.414 )
 transform/scale = Vector2( 2, 2 )
 frames = SubResource( 16 )
 animation = "label_mail"
-frame = 2
+frame = 3
 playing = true
 
 [node name="label_enemy_animation" type="AnimationPlayer" parent="hud"]
@@ -470,5 +470,9 @@ custom_colors/font_color = Color( 0.556989, 0.0750732, 0.800781, 1 )
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
+
+[connection signal="body_enter" from="." to="." method="_on_player_body_enter"]
+
+[connection signal="body_enter_shape" from="." to="." method="_on_player_body_enter_shape"]
 
 

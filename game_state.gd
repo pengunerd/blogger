@@ -13,6 +13,8 @@ func _ready():
 		max_points = f.get_var()
 
 
+
+
 func game_over():
 	if (points > max_points):
 		max_points = points

@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=1]
+[gd_scene load_steps=14 format=1]
 
 [ext_resource path="res://bg_trees_tileset.xml" type="TileSet" id=1]
 [ext_resource path="res://tileset.tres" type="TileSet" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://enemy.tscn" type="PackedScene" id=10]
 [ext_resource path="res://parallax_bg.tscn" type="PackedScene" id=11]
 [ext_resource path="res://mail.tscn" type="PackedScene" id=12]
+[ext_resource path="res://cat.tscn" type="PackedScene" id=13]
 
 [node name="stage" type="Node"]
 
@@ -647,5 +648,11 @@ transform/pos = Vector2( 8931.61, 1119.97 )
 [node name="mail35" parent="mail" instance=ExtResource( 12 )]
 
 transform/pos = Vector2( 10929.4, 1558.3 )
+
+[node name="cat" type="Node" parent="."]
+
+[node name="cat" parent="cat" instance=ExtResource( 13 )]
+
+transform/pos = Vector2( 3085.02, 1444.41 )
 
 
