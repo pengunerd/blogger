@@ -8,7 +8,7 @@ var player_chibi_class= preload("res://playerChibi.gd")
 #var mail_score=0
 
 
-func _on_body_enter( body ):
+func _on_cat_body_enter( body ):
 	if (not taken and body extends player_chibi_class):
 		#get_node("anim").play("taken-mail")
 		#taken = true
@@ -33,5 +33,13 @@ func _on_coin_area_enter(area):
 	pass # replace with function body
 
 
-func _on_coin_area_enter_shape(area_id, area, area_shape, area_shape):
+func _on_cat_area_enter_shape(area_id, area, area_shape, area_shape):
+	print("HELLLOOOOO")
 	pass # replace with function body
+	
+
+func _ready():
+	#enemy = ResourceLoader.load("res://enemy.tscn")
+	connect("body_enter", self, "on_cat_body_enter")
+	#var start_pos = get_pos()
+	#print("CAT Start Pos is ", start_pos)

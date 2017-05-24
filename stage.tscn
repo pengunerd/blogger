@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=1]
+[gd_scene load_steps=17 format=1]
 
 [ext_resource path="res://bg_trees_tileset.xml" type="TileSet" id=1]
 [ext_resource path="res://tileset.tres" type="TileSet" id=2]
@@ -13,6 +13,9 @@
 [ext_resource path="res://parallax_bg.tscn" type="PackedScene" id=11]
 [ext_resource path="res://mail.tscn" type="PackedScene" id=12]
 [ext_resource path="res://cat.tscn" type="PackedScene" id=13]
+[ext_resource path="res://tv.tscn" type="PackedScene" id=14]
+[ext_resource path="res://phone.tscn" type="PackedScene" id=15]
+[ext_resource path="res://icecream.tscn" type="PackedScene" id=16]
 
 [node name="stage" type="Node"]
 
@@ -651,8 +654,30 @@ transform/pos = Vector2( 10929.4, 1558.3 )
 
 [node name="cat" type="Node" parent="."]
 
-[node name="cat" parent="cat" instance=ExtResource( 13 )]
+[node name="cat1" parent="cat" instance=ExtResource( 13 )]
 
 transform/pos = Vector2( 3085.02, 1444.41 )
+
+[node name="tv" type="Node" parent="."]
+
+[node name="tv1" parent="tv" instance=ExtResource( 14 )]
+
+transform/pos = Vector2( 3805.26, 1443.29 )
+
+[node name="tv2" parent="tv" instance=ExtResource( 14 )]
+
+transform/pos = Vector2( 4294.5, 1442.27 )
+
+[node name="phone" type="Node" parent="."]
+
+[node name="phone1" parent="phone" instance=ExtResource( 15 )]
+
+transform/pos = Vector2( 3432.06, 1351.24 )
+
+[node name="icecream" type="Node" parent="."]
+
+[node name="icecream1" parent="icecream" instance=ExtResource( 16 )]
+
+transform/pos = Vector2( 3269.2, 1354.6 )
 
 

@@ -1,21 +1,20 @@
-[gd_scene load_steps=14 format=1]
+[gd_scene load_steps=13 format=1]
 
-[ext_resource path="res://cat.gd" type="Script" id=1]
-[ext_resource path="res://images/cat.png" type="Texture" id=2]
-[ext_resource path="res://images/email2.png" type="Texture" id=3]
-[ext_resource path="res://sound_coin.wav" type="Sample" id=4]
-[ext_resource path="res://bullet.png" type="Texture" id=5]
-[ext_resource path="res://images/spark_particle2.png" type="Texture" id=6]
+[ext_resource path="res://images/tv.png" type="Texture" id=1]
+[ext_resource path="res://images/email2.png" type="Texture" id=2]
+[ext_resource path="res://sound_coin.wav" type="Sample" id=3]
+[ext_resource path="res://bullet.png" type="Texture" id=4]
+[ext_resource path="res://images/spark_particle2.png" type="Texture" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 23.8694, 10.6203 )
+extents = Vector2( 47.8381, 10.6203 )
 
 [sub_resource type="Animation" id=2]
 
 resource/name = "idle_move"
-length = 2.5
+length = 4.0
 loop = true
 step = 0.05
 tracks/0/type = "value"
@@ -23,10 +22,10 @@ tracks/0/path = NodePath("distraction/sprite:frame")
 tracks/0/interp = 1
 tracks/0/imported = false
 tracks/0/keys = {
-"times": FloatArray( 0, 0.25, 0.5, 0.75, 1, 1.25, 1.5, 1.75, 2, 2.25, 2.5 ),
-"transitions": FloatArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": FloatArray( 0, 1, 2, 3 ),
+"transitions": FloatArray( 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 0, 1, 2, 3, 4, 5, 6, 5, 4, 3, 2 ]
+"values": [ 0, 1, 2, 3 ]
 }
 
 [sub_resource type="Animation" id=3]
@@ -91,7 +90,7 @@ tracks/0/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 1,
-"values": [ ExtResource( 3 ) ]
+"values": [ ExtResource( 2 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("sound:play/play")
@@ -149,7 +148,7 @@ samples/coin = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
-"sample": ExtResource( 4 )
+"sample": ExtResource( 3 )
 }
 
 [sub_resource type="ColorRamp" id=6]
@@ -162,21 +161,19 @@ colors = ColorArray( 1, 1, 1, 1, 0, 0, 0, 1 )
 offsets = FloatArray( 0, 0.00584795, 1 )
 colors = ColorArray( 0, 0, 0, 1, 0.933594, 0.503265, 0.866355, 1, 0.412903, 0.832492, 0.960938, 1 )
 
-[node name="cat" type="Area2D"]
+[node name="tv" type="Area2D"]
 
-transform/scale = Vector2( 1.19684, 1.27819 )
 input/pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
 linear_damp = 0.1
 angular_damp = 1.0
-script/script = ExtResource( 1 )
 
 [node name="distraction" type="RigidBody2D" parent="."]
 
 input/pickable = false
 shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 0.741308, 0, 0, 3.35237, 0, 5.69432 )
+shapes/0/transform = Matrix32( 0.794881, 0, 0, 3.18614, -1.15884, 7.9597 )
 shapes/0/trigger = false
 collision/layers = 1
 collision/mask = 1
@@ -198,13 +195,14 @@ damp_override/angular = -1.0
 
 [node name="sprite" type="Sprite" parent="distraction"]
 
-texture = ExtResource( 2 )
-hframes = 7
+transform/pos = Vector2( 0, 9 )
+texture = ExtResource( 1 )
+hframes = 4
 
 [node name="collision" type="CollisionShape2D" parent="distraction"]
 
-transform/pos = Vector2( 0, 5.69432 )
-transform/scale = Vector2( 0.741308, 3.35237 )
+transform/pos = Vector2( -1.15884, 7.9597 )
+transform/scale = Vector2( 0.794881, 3.18614 )
 shape = SubResource( 1 )
 trigger = false
 _update_shape_index = 0
@@ -224,8 +222,7 @@ autoplay = "idle_move"
 
 [node name="sound" type="SamplePlayer2D" parent="."]
 
-visibility/visible = false
-transform/pos = Vector2( 2.90397, 16.6268 )
+transform/pos = Vector2( 3.7189, 27.6913 )
 params/volume_db = 0.0
 params/pitch_scale = 1.0
 params/attenuation/min_distance = 1.0
@@ -243,7 +240,7 @@ config/amount = 8
 config/lifetime = 0.4
 config/process_mode = 1
 config/half_extents = Vector2( 5, 5 )
-config/texture = ExtResource( 5 )
+config/texture = ExtResource( 4 )
 params/direction = 0.0
 params/spread = 10.0
 params/linear_velocity = 0.0
@@ -264,8 +261,7 @@ color/color_ramp = SubResource( 6 )
 
 [node name="enabler" type="VisibilityEnabler2D" parent="."]
 
-visibility/visible = false
-transform/pos = Vector2( 26.1522, -1.79583 )
+transform/pos = Vector2( 2.51908, 19.5701 )
 transform/scale = Vector2( 2.91258, 1.84326 )
 rect = Rect2( -10, -10, 20, 20 )
 enabler/pause_animations = true
@@ -284,7 +280,7 @@ config/amount = 10
 config/lifetime = 2.0
 config/process_mode = 1
 config/half_extents = Vector2( 20, 20 )
-config/texture = ExtResource( 6 )
+config/texture = ExtResource( 5 )
 params/direction = 0.0
 params/spread = 180.0
 params/linear_velocity = 20.0

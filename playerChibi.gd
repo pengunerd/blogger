@@ -52,7 +52,7 @@ var bullet = preload("res://bullet.tscn")
 var floor_h_velocity = 0.0
 var enemy
 var chibi_pos
-
+var cat_pos
 
 func _integrate_forces(s):
 	var lv = s.get_linear_velocity()
@@ -242,18 +242,24 @@ func _integrate_forces(s):
 
 func _on_player_body_enter(body):
 	print("Body entered the area")
+	# Detect player's colliding bodies 
 	var bodies = get_colliding_bodies()
 	for test in bodies:
+		# If distraction rigid body / scene hit, print message and apply impulse
 		if (test.get_name()=="distraction"):
 			print("DISTRACTION DETECTED")
-			self.apply_impulse(Vector2(0,0),Vector2(-50000,10))
+			#print distraction location
+			var distraction_pos = test.get_global_pos()
+			print("Object at ", distraction_pos)
+			
+			# check where chibi is coming from and bounce in opposite direction
+			# if chibi pos is less than distraction position (coming from left), then bounce left, otherwise bounce right
+			if(chibi_pos < distraction_pos):
+				self.apply_impulse(Vector2(0,0),Vector2(-60000,10))
+			else:
+				self.apply_impulse(Vector2(0,0),Vector2(60000,10))
 	#print(chibi_pos)
 
-
-
-func _body_enter(body):
-	print("hello")
-	
 
 func _ready():
 	enemy = ResourceLoader.load("res://enemy.tscn")
@@ -261,8 +267,14 @@ func _ready():
 	set_contact_monitor(true)
 	set_max_contacts_reported(20)
 	set_process(true)
+	
+	# Testing printing positions of player and cat
 	var start_pos = get_pos()
-	print(start_pos)
+	print("Chibi starting at ", start_pos)
+	cat_pos = get_node("/root/stage/cat/cat1").get_pos()
+	print("Cat starting at ", cat_pos)
+	if(start_pos > cat_pos):
+		print("Chibi is in front of cat!")
 
 func _process(delta):
 	chibi_pos = get_node("sprite_chibi").get_global_pos()
