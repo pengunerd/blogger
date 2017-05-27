@@ -281,6 +281,11 @@ func _process(delta):
 	
 	#print(chibi_pos)
 
+# can probably delete if we still want to let player move after game over
+func stop():
+	set_process(false)
+	print("stopping player??")
+
 	
 #	if !Globals.has_singleton("Facebook"):
 #		return

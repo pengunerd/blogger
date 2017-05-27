@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=1]
+[gd_scene load_steps=37 format=1]
 
 [ext_resource path="res://playerChibi.gd" type="Script" id=1]
 [ext_resource path="res://player/chibi-girl1.png" type="Texture" id=2]
@@ -17,6 +17,7 @@
 [ext_resource path="res://images/email3.png" type="Texture" id=15]
 [ext_resource path="res://images/email4.png" type="Texture" id=16]
 [ext_resource path="res://enemy-original.png" type="Texture" id=17]
+[ext_resource path="res://images/game_over.png" type="Texture" id=18]
 
 [sub_resource type="RayShape2D" id=1]
 
@@ -160,6 +161,11 @@ tracks/0/keys = {
 "values": [ 1, 2, 3, 4, 5, 6, 7 ]
 }
 
+[sub_resource type="ColorRamp" id=18]
+
+offsets = FloatArray( 0, 0.168712, 0.294479, 0.444785, 0.567485, 0.656442, 0.760736, 0.920245, 1 )
+colors = ColorArray( 1, 0, 0, 1, 1, 0.328125, 0, 1, 1, 0.910401, 0.180812, 1, 0.466136, 1, 0.355334, 1, 0.49424, 0.90517, 1, 1, 0.033783, 0.0699999, 0.960938, 1, 0.475008, 0.0717163, 0.917969, 1, 0.95065, 0.642968, 0.96845, 1, 1, 1, 1, 1 )
+
 [node name="player" type="RigidBody2D"]
 
 input/pickable = false
@@ -252,8 +258,8 @@ autoplay = ""
 
 transform/pos = Vector2( 0.142334, 2.34448 )
 transform/scale = Vector2( 1.85205, 1.81703 )
-offset = Vector2( 0, -50 )
-anchor_mode = 1
+offset = Vector2( -250, -200 )
+anchor_mode = 0
 rotating = false
 current = true
 zoom = Vector2( 0.8, 0.8 )
@@ -434,7 +440,7 @@ transform/pos = Vector2( 1380.7, 103.414 )
 transform/scale = Vector2( 2, 2 )
 frames = SubResource( 16 )
 animation = "label_mail"
-frame = 3
+frame = 2
 playing = true
 
 [node name="label_enemy_animation" type="AnimationPlayer" parent="hud"]
@@ -470,6 +476,42 @@ custom_colors/font_color = Color( 0.556989, 0.0750732, 0.800781, 1 )
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
+
+[node name="game_over" type="Sprite" parent="hud"]
+
+visibility/visible = false
+transform/pos = Vector2( 800, 390 )
+texture = ExtResource( 18 )
+
+[node name="game_over_effects" type="Particles2D" parent="hud/game_over"]
+
+visibility/behind_parent = true
+transform/pos = Vector2( -10, -4 )
+config/amount = 180
+config/lifetime = 1.0
+config/process_mode = 1
+config/half_extents = Vector2( 180, 180 )
+params/direction = 0.0
+params/spread = 27.08
+params/linear_velocity = 48.0
+params/spin_velocity = 280.92
+params/orbit_velocity = 0.5
+params/gravity_direction = 0.0
+params/gravity_strength = 9.8
+params/radial_accel = 2.0
+params/tangential_accel = 0.0
+params/damping = 0.0
+params/initial_angle = 5.0
+params/initial_size = 10.0
+params/final_size = 1.0
+params/hue_variation = 0.0
+params/anim_speed_scale = 1.0
+params/anim_initial_pos = 0.0
+randomness/spin_velocity = 1.0
+randomness/orbit_velocity = 1.0
+randomness/radial_accel = 5.0
+randomness/initial_angle = 1.0
+color/color_ramp = SubResource( 18 )
 
 [connection signal="body_enter" from="." to="." method="_on_player_body_enter"]
 
