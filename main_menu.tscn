@@ -21,11 +21,27 @@ focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
+margin/left = 179.0
+margin/top = 88.0
+margin/right = 255.0
+margin/bottom = 102.0
+text = "Best Score: "
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="time" type="Label" parent="."]
+
+rect/scale = Vector2( 3, 3 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
 margin/left = 180.0
 margin/top = 155.0
 margin/right = 253.0
 margin/bottom = 169.0
-text = "Best Time: "
+text = "Time: "
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1

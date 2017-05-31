@@ -269,12 +269,14 @@ func _ready():
 	set_process(true)
 	
 	# Testing printing positions of player and cat
+	"""
 	var start_pos = get_pos()
 	print("Chibi starting at ", start_pos)
 	cat_pos = get_node("/root/stage/cat/cat1").get_pos()
 	print("Cat starting at ", cat_pos)
 	if(start_pos > cat_pos):
 		print("Chibi is in front of cat!")
+	"""
 
 func _process(delta):
 	chibi_pos = get_node("sprite_chibi").get_global_pos()
@@ -295,3 +297,8 @@ func stop():
 #	var msg = "I just sneezed on your wall! Beat my score and Stop the Running nose!"
 #	var title = "I just sneezed on your wall!"
 #	Facebook.post("feed", msg, title, link, icon)
+
+
+func _on_restartButton_pressed():
+	get_tree().change_scene("res://main_menu.tscn")
+	

@@ -63,8 +63,11 @@ func _integrate_forces(s):
 						print("No more enemies!")
 						get_node("/root/stage/player/hud/game_over").show()
 						get_node("/root/stage/player").stop()
-						get_node("/root/stage/player/hud/timer").stopTimer()
 						get_node("/root/game_state").game_over()
+						
+						get_node("/root/stage/player/hud/restartButton").show()
+						# stop updates to timer + game state
+						get_node("/root/stage/player/hud/timer").stopTimer()
 					
 					break
 			
