@@ -1,4 +1,4 @@
-[gd_scene load_steps=64 format=1]
+[gd_scene load_steps=65 format=1]
 
 [ext_resource path="res://basepack_ground_collision/box.png" type="Texture" id=1]
 [ext_resource path="res://basepack_ground_collision/grass.png" type="Texture" id=2]
@@ -33,6 +33,7 @@
 [ext_resource path="res://basepack_ground_collision/liquidWater.png" type="Texture" id=31]
 [ext_resource path="res://basepack_ground_collision/liquidWaterTop.png" type="Texture" id=32]
 [ext_resource path="res://basepack_ground_collision/liquidWaterTop_mid.png" type="Texture" id=33]
+[ext_resource path="res://basepack_ground_collision/grassCenterHalfTop.png" type="Texture" id=34]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 
@@ -826,5 +827,33 @@ texture = ExtResource( 32 )
 
 transform/pos = Vector2( 800, 445 )
 texture = ExtResource( 33 )
+
+[node name="grassCenterHalfTop" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1.0596, 577.999 )
+texture = ExtResource( 34 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="grassCenterHalfTop"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 18 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="grassCenterHalfTop/StaticBody2D"]
+
+build_mode = 0
+polygon = Vector2Array( -35, -35, 35, -35, 35.0358, 5.14159, -35.0033, 5.14159 )
+shape_range = Vector2( 0, 0 )
+trigger = false
 
 
