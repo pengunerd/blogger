@@ -31,3 +31,6 @@ func _on_play_pressed():
 	#get_node("/root/game_state").points = 0
 	get_node("/root/game_state").setup_game()
 	get_tree().change_scene("res://stage.tscn")
+
+func _on_rules_pressed():
+	get_tree().change_scene("res://instructions.tscn")

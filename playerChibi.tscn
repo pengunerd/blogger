@@ -259,7 +259,7 @@ autoplay = ""
 
 transform/pos = Vector2( 0.142334, 2.34448 )
 transform/scale = Vector2( 1.85205, 1.81703 )
-offset = Vector2( -250, -200 )
+offset = Vector2( -250, -275 )
 anchor_mode = 0
 rotating = false
 current = true
@@ -391,9 +391,9 @@ focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
-margin/left = 1321.0
+margin/left = 1301.0
 margin/top = 23.0
-margin/right = 1361.0
+margin/right = 1341.0
 margin/bottom = 37.0
 custom_colors/font_color = Color( 0.898438, 0.256195, 0.798087, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
@@ -409,9 +409,9 @@ focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
-margin/left = 1440.0
+margin/left = 1420.0
 margin/top = 20.0
-margin/right = 1480.0
+margin/right = 1460.0
 margin/bottom = 34.0
 custom_colors/font_color = Color( 0.556989, 0.0750732, 0.800781, 1 )
 percent_visible = 1.0
@@ -426,9 +426,9 @@ focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
-margin/left = 1460.0
+margin/left = 1440.0
 margin/top = 80.0
-margin/right = 1500.0
+margin/right = 1480.0
 margin/bottom = 94.0
 custom_colors/font_color = Color( 0.556989, 0.0750732, 0.800781, 1 )
 percent_visible = 1.0
@@ -437,11 +437,11 @@ max_lines_visible = -1
 
 [node name="label_mail_counter" type="AnimatedSprite" parent="hud"]
 
-transform/pos = Vector2( 1380.7, 103.414 )
+transform/pos = Vector2( 1360.7, 103.414 )
 transform/scale = Vector2( 2, 2 )
 frames = SubResource( 16 )
 animation = "label_mail"
-frame = 3
+frame = 2
 playing = true
 
 [node name="label_enemy_animation" type="AnimationPlayer" parent="hud"]
@@ -457,7 +457,7 @@ autoplay = "label_enemy_animation"
 
 [node name="label_enemy" type="Sprite" parent="hud"]
 
-transform/pos = Vector2( 1380, 180 )
+transform/pos = Vector2( 1360, 180 )
 texture = ExtResource( 17 )
 hframes = 8
 frame = 4
@@ -469,9 +469,9 @@ focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
-margin/left = 1460.0
+margin/left = 1440.0
 margin/top = 159.0
-margin/right = 1500.0
+margin/right = 1480.0
 margin/bottom = 173.0
 custom_colors/font_color = Color( 0.556989, 0.0750732, 0.800781, 1 )
 percent_visible = 1.0
