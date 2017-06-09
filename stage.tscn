@@ -503,8 +503,6 @@ drag_margin/bottom = 0.2
 
 [node name="mail" type="Node" parent="."]
 
-editor/display_folded = true
-
 [node name="mail" parent="mail" instance=ExtResource( 12 )]
 
 transform/pos = Vector2( 700.735, 1204.92 )

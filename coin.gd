@@ -7,7 +7,7 @@ var taken = false
 
 func _on_body_enter( body ):
 	if (not taken and body extends preload("res://playerChibi.gd")):
-		get_node("anim").play("taken")
+		get_node("anim").play("takenMUTED")
 		taken = true
 		print("coin taken")
 

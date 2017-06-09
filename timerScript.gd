@@ -23,7 +23,7 @@ func _fixed_process(delta):
 	elapsed = elapsed + milliseconds
 	#print(elapsed)
 	
-	var str_elapsed = "%02d m: %02d s" % [minutes, seconds]
+	var str_elapsed = "%01d:%02ds" % [minutes, seconds]
 	#print("elapsed : ", str_elapsed)
 	#set_text("Time : " + str_elapsed)
 	set_text(str_elapsed)

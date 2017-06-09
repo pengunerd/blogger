@@ -28,10 +28,10 @@ margin/top = 307.0
 margin/right = 394.0
 margin/bottom = 460.0
 custom_fonts/font = ExtResource( 3 )
-custom_colors/font_color = Color( 0.150421, 0.308403, 0.363281, 1 )
+custom_colors/font_color = Color( 0.170975, 0.435467, 0.527344, 1 )
 text = "Move Left - A or Left Arrow
 Move Right - D or Right Arrow
-Jump - Spacebar
+Jump - Spacebar or Up Arrow
 Spam Buster - E"
 percent_visible = 1.0
 lines_skipped = 0
@@ -82,7 +82,7 @@ margin/top = 67.0
 margin/right = 635.0
 margin/bottom = 103.0
 custom_fonts/font = ExtResource( 3 )
-custom_colors/font_color = Color( 0.473389, 0.0769043, 0.820313, 1 )
+custom_colors/font_color = Color( 0.658899, 0.380676, 0.902344, 1 )
 text = "Collect emails, destroy spam, and avoid distractions!"
 percent_visible = 1.0
 lines_skipped = 0

@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=1]
+[gd_scene load_steps=41 format=1]
 
 [ext_resource path="res://playerChibi.gd" type="Script" id=1]
 [ext_resource path="res://player/chibi-girl1.png" type="Texture" id=2]
@@ -11,14 +11,16 @@
 [ext_resource path="res://osb_right.png" type="Texture" id=9]
 [ext_resource path="res://osb_jump.png" type="Texture" id=10]
 [ext_resource path="res://osb_fire.png" type="Texture" id=11]
-[ext_resource path="res://timerScript.gd" type="Script" id=12]
-[ext_resource path="res://images/email1.png" type="Texture" id=13]
-[ext_resource path="res://images/email2.png" type="Texture" id=14]
-[ext_resource path="res://images/email3.png" type="Texture" id=15]
-[ext_resource path="res://images/email4.png" type="Texture" id=16]
-[ext_resource path="res://enemy2.png" type="Texture" id=17]
-[ext_resource path="res://images/game_over.png" type="Texture" id=18]
-[ext_resource path="res://basepack_ground_collision/boxItem.png" type="Texture" id=19]
+[ext_resource path="res://Oswald-regular-44.fnt" type="BitmapFont" id=12]
+[ext_resource path="res://timerScript.gd" type="Script" id=13]
+[ext_resource path="res://images/email1.png" type="Texture" id=14]
+[ext_resource path="res://images/email2.png" type="Texture" id=15]
+[ext_resource path="res://images/email3.png" type="Texture" id=16]
+[ext_resource path="res://images/email4.png" type="Texture" id=17]
+[ext_resource path="res://images/email.png" type="Texture" id=18]
+[ext_resource path="res://enemy2.png" type="Texture" id=19]
+[ext_resource path="res://images/game_over.png" type="Texture" id=20]
+[ext_resource path="res://basepack_ground_collision/boxItem.png" type="Texture" id=21]
 
 [sub_resource type="RayShape2D" id=1]
 
@@ -139,7 +141,7 @@ samples/shoot = {
 [sub_resource type="SpriteFrames" id=16]
 
 animations = [ {
-"frames": [ ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ) ],
+"frames": [ ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ) ],
 "loop": true,
 "name": "label_mail",
 "speed": 5.0
@@ -148,21 +150,38 @@ animations = [ {
 [sub_resource type="Animation" id=17]
 
 resource/name = "label_enemy_animation"
-length = 1.0
+length = 0.6
 loop = true
-step = 0.6
+step = 0.05
 tracks/0/type = "value"
 tracks/0/path = NodePath("label_enemy:frame")
 tracks/0/interp = 1
 tracks/0/imported = false
 tracks/0/keys = {
-"times": FloatArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6 ),
-"transitions": FloatArray( 1, 1, 1, 1, 1, 1, 1 ),
+"times": FloatArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": FloatArray( 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ 1, 2, 3, 4, 5, 6, 7 ]
+"values": [ 0, 1, 2, 3, 2, 1 ]
 }
 
-[sub_resource type="ColorRamp" id=18]
+[sub_resource type="Animation" id=18]
+
+resource/name = "label_mail_animation"
+length = 0.6
+loop = true
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("label_mail_counter5:frame")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": FloatArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0, 1, 2, 3, 2, 1 ]
+}
+
+[sub_resource type="ColorRamp" id=19]
 
 offsets = FloatArray( 0.0233918, 0.168712, 0.294479, 0.444785, 0.567485, 0.656442, 0.760736, 0.920245, 1 )
 colors = ColorArray( 0.941406, 0.371414, 0.651957, 1, 1, 0.328125, 0, 1, 0.90625, 0.878732, 0.201782, 1, 0.241558, 0.601563, 0.16684, 1, 0.454193, 0.853228, 0.945313, 1, 0.033783, 0.330762, 0.960938, 1, 0.475008, 0.0717163, 0.917969, 1, 0.618158, 0.432373, 0.628906, 1, 1, 1, 1, 1 )
@@ -386,17 +405,17 @@ scale = Vector2( 0.5, 0.5 )
 
 [node name="label_time" type="Label" parent="hud"]
 
-rect/scale = Vector2( 3, 3 )
+rect/scale = Vector2( 1.3, 1.3 )
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
-margin/left = 1301.0
-margin/top = 23.0
-margin/right = 1341.0
-margin/bottom = 37.0
-custom_colors/font_color = Color( 0.898438, 0.256195, 0.798087, 1 )
-custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+margin/left = 1363.0
+margin/top = 22.0
+margin/right = 1424.0
+margin/bottom = 58.0
+custom_fonts/font = ExtResource( 12 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "TIME:"
 percent_visible = 1.0
 lines_skipped = 0
@@ -404,32 +423,34 @@ max_lines_visible = -1
 
 [node name="timer" type="Label" parent="hud"]
 
-rect/scale = Vector2( 3, 3 )
+rect/scale = Vector2( 1.3, 1.3 )
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
-margin/left = 1420.0
-margin/top = 20.0
-margin/right = 1460.0
-margin/bottom = 34.0
+margin/left = 1476.0
+margin/top = 21.0
+margin/right = 1516.0
+margin/bottom = 57.0
+custom_fonts/font = ExtResource( 12 )
 custom_colors/font_color = Color( 0.556989, 0.0750732, 0.800781, 1 )
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-script/script = ExtResource( 12 )
+script/script = ExtResource( 13 )
 
 [node name="mail_counter" type="Label" parent="hud"]
 
-rect/scale = Vector2( 3, 3 )
+rect/scale = Vector2( 1.3, 1.3 )
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
-margin/left = 1440.0
-margin/top = 80.0
-margin/right = 1480.0
-margin/bottom = 94.0
+margin/left = 1476.0
+margin/top = 87.0
+margin/right = 1516.0
+margin/bottom = 123.0
+custom_fonts/font = ExtResource( 12 )
 custom_colors/font_color = Color( 0.556989, 0.0750732, 0.800781, 1 )
 percent_visible = 1.0
 lines_skipped = 0
@@ -437,12 +458,32 @@ max_lines_visible = -1
 
 [node name="label_mail_counter" type="AnimatedSprite" parent="hud"]
 
+visibility/visible = false
 transform/pos = Vector2( 1360.7, 103.414 )
 transform/scale = Vector2( 2, 2 )
 frames = SubResource( 16 )
 animation = "label_mail"
-frame = 3
 playing = true
+
+[node name="label_mail_counter5" type="Sprite" parent="hud"]
+
+transform/pos = Vector2( 1399.95, 110.353 )
+transform/scale = Vector2( 1.4954, 1.4954 )
+texture = ExtResource( 18 )
+hframes = 4
+frame = 2
+
+[node name="label_mail_animation" type="AnimationPlayer" parent="hud"]
+
+playback/process_mode = 1
+playback/default_blend_time = 0.0
+root/root = NodePath("..")
+anims/label_enemy_animation = SubResource( 17 )
+anims/label_mail_animation = SubResource( 18 )
+playback/active = true
+playback/speed = 1.0
+blend_times = [  ]
+autoplay = "label_mail_animation"
 
 [node name="label_enemy_animation" type="AnimationPlayer" parent="hud"]
 
@@ -457,22 +498,23 @@ autoplay = "label_enemy_animation"
 
 [node name="label_enemy" type="Sprite" parent="hud"]
 
-transform/pos = Vector2( 1360, 180 )
-texture = ExtResource( 17 )
+transform/pos = Vector2( 1403.86, 177.807 )
+texture = ExtResource( 19 )
 hframes = 8
 frame = 4
 
 [node name="enemy_counter" type="Label" parent="hud"]
 
-rect/scale = Vector2( 3, 3 )
+rect/scale = Vector2( 1.3, 1.3 )
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
-margin/left = 1440.0
-margin/top = 159.0
-margin/right = 1480.0
-margin/bottom = 173.0
+margin/left = 1474.0
+margin/top = 152.0
+margin/right = 1514.0
+margin/bottom = 188.0
+custom_fonts/font = ExtResource( 12 )
 custom_colors/font_color = Color( 0.556989, 0.0750732, 0.800781, 1 )
 percent_visible = 1.0
 lines_skipped = 0
@@ -480,8 +522,9 @@ max_lines_visible = -1
 
 [node name="game_over" type="Sprite" parent="hud"]
 
+visibility/visible = false
 transform/pos = Vector2( 800, 390 )
-texture = ExtResource( 18 )
+texture = ExtResource( 20 )
 
 [node name="game_over_effects" type="Particles2D" parent="hud/game_over"]
 
@@ -511,7 +554,7 @@ randomness/spin_velocity = 1.0
 randomness/orbit_velocity = 1.0
 randomness/radial_accel = 5.0
 randomness/initial_angle = 1.0
-color/color_ramp = SubResource( 18 )
+color/color_ramp = SubResource( 19 )
 
 [node name="restartButton" type="TextureButton" parent="hud"]
 
@@ -527,7 +570,7 @@ margin/bottom = 410.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 19 )
+textures/normal = ExtResource( 21 )
 params/resize_mode = 0
 params/stretch_mode = 0
 

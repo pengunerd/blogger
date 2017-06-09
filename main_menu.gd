@@ -10,9 +10,9 @@ func _ready():
 	var seconds = int(elapsed) % 60
 	#calculate milliseconds and multiply by 1000 for display
 	var milliseconds = elapsed - int(elapsed)
-	var milliseconds_display = milliseconds * 1000
+	var milliseconds_display = milliseconds * 10
 	
-	var str_elapsed = "%02dm %02ds %03dms" % [minutes, seconds, milliseconds_display]
+	var str_elapsed = "%01dm %02d.%01ds" % [minutes, seconds, milliseconds_display]
 	
 	# hardcode if elapsed time==9999 (default starting), then don't display anything; else display best time
 	if(elapsed == 9999):

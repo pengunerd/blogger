@@ -111,6 +111,7 @@ colors = ColorArray( 1, 1, 1, 1, 0, 0, 0, 1 )
 
 [node name="coin" type="Area2D"]
 
+visibility/visible = false
 transform/pos = Vector2( -6.2989, -8.90209 )
 transform/scale = Vector2( 1.19684, 1.27819 )
 input/pickable = true
@@ -125,6 +126,7 @@ script/script = ExtResource( 1 )
 
 [node name="sprite" type="Sprite" parent="."]
 
+visibility/visible = false
 texture = ExtResource( 2 )
 hframes = 4
 frame = 2
@@ -143,12 +145,14 @@ autoplay = "spin"
 
 [node name="collision" type="CollisionShape2D" parent="."]
 
+visibility/visible = false
 shape = SubResource( 1 )
 trigger = false
 _update_shape_index = -1
 
 [node name="sound" type="SamplePlayer2D" parent="."]
 
+visibility/visible = false
 params/volume_db = 0.0
 params/pitch_scale = 1.0
 params/attenuation/min_distance = 1.0
@@ -160,6 +164,7 @@ config/pitch_random = 0.0
 
 [node name="particles" type="Particles2D" parent="."]
 
+visibility/visible = false
 visibility/self_opacity = 0.0
 visibility/blend_mode = 1
 config/amount = 8
@@ -187,6 +192,7 @@ color/color_ramp = SubResource( 5 )
 
 [node name="enabler" type="VisibilityEnabler2D" parent="."]
 
+visibility/visible = false
 rect = Rect2( -10, -10, 20, 20 )
 enabler/pause_animations = true
 enabler/freeze_bodies = true
