@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=1]
+[gd_scene load_steps=18 format=1]
 
 [ext_resource path="res://bg_trees_tileset.xml" type="TileSet" id=1]
 [ext_resource path="res://tileset.tres" type="TileSet" id=2]
@@ -13,9 +13,10 @@
 [ext_resource path="res://parallax_bg.tscn" type="PackedScene" id=11]
 [ext_resource path="res://mail.tscn" type="PackedScene" id=12]
 [ext_resource path="res://cat.tscn" type="PackedScene" id=13]
-[ext_resource path="res://tv.tscn" type="PackedScene" id=14]
-[ext_resource path="res://phone.tscn" type="PackedScene" id=15]
-[ext_resource path="res://icecream.tscn" type="PackedScene" id=16]
+[ext_resource path="res://cat.gd" type="Script" id=14]
+[ext_resource path="res://tv.tscn" type="PackedScene" id=15]
+[ext_resource path="res://phone.tscn" type="PackedScene" id=16]
+[ext_resource path="res://icecream.tscn" type="PackedScene" id=17]
 
 [node name="stage" type="Node"]
 
@@ -320,7 +321,7 @@ transform/pos = Vector2( 8929.98, 1577.12 )
 
 [node name="player" parent="." instance=ExtResource( 8 )]
 
-transform/pos = Vector2( 1813.99, 1483.21 )
+transform/pos = Vector2( 3559.4, 1477.61 )
 mass = 51.0204
 gravity_scale = 1.1
 
@@ -341,11 +342,11 @@ editor/display_folded = true
 
 [node name="enemy 3" parent="enemies" instance=ExtResource( 10 )]
 
-transform/pos = Vector2( 929.838, 1283.95 )
+transform/pos = Vector2( 929.838, 1289.98 )
 
 [node name="enemy 4" parent="enemies" instance=ExtResource( 10 )]
 
-transform/pos = Vector2( 8930.16, 1345.2 )
+transform/pos = Vector2( 8930.16, 1357.26 )
 
 [node name="enemy 5" parent="enemies" instance=ExtResource( 10 )]
 
@@ -357,7 +358,7 @@ transform/pos = Vector2( 996.709, 1498.19 )
 
 [node name="enemy 7" parent="enemies" instance=ExtResource( 10 )]
 
-transform/pos = Vector2( 718.121, 1494.9 )
+transform/pos = Vector2( 718.121, 1499.42 )
 
 [node name="enemy 8" parent="enemies" instance=ExtResource( 10 )]
 
@@ -365,11 +366,11 @@ transform/pos = Vector2( 2636.97, 1496.94 )
 
 [node name="enemy 9" parent="enemies" instance=ExtResource( 10 )]
 
-transform/pos = Vector2( 1691.31, 925.947 )
+transform/pos = Vector2( 1691.31, 940.911 )
 
 [node name="enemy 10" parent="enemies" instance=ExtResource( 10 )]
 
-transform/pos = Vector2( 2510.17, 504.353 )
+transform/pos = Vector2( 2509.27, 941.164 )
 
 [node name="enemy 11" parent="enemies" instance=ExtResource( 10 )]
 
@@ -377,7 +378,7 @@ transform/pos = Vector2( 2115.27, 1499.52 )
 
 [node name="enemy 12" parent="enemies" instance=ExtResource( 10 )]
 
-transform/pos = Vector2( 3164.45, 1490.88 )
+transform/pos = Vector2( 3165.96, 1499.92 )
 
 [node name="enemy 13" parent="enemies" instance=ExtResource( 10 )]
 
@@ -389,7 +390,7 @@ transform/pos = Vector2( 3690.9, 1470.75 )
 
 [node name="enemy 15" parent="enemies" instance=ExtResource( 10 )]
 
-transform/pos = Vector2( 2423.39, 939.054 )
+transform/pos = Vector2( 2423.39, 943.566 )
 
 [node name="enemy16" parent="enemies" instance=ExtResource( 10 )]
 
@@ -397,7 +398,7 @@ transform/pos = Vector2( 7419.41, 1359.77 )
 
 [node name="enemy17" parent="enemies" instance=ExtResource( 10 )]
 
-transform/pos = Vector2( 9693.09, 1488.3 )
+transform/pos = Vector2( 9694.6, 1495.84 )
 
 [node name="enemy18" parent="enemies" instance=ExtResource( 10 )]
 
@@ -417,11 +418,11 @@ transform/pos = Vector2( 10526.3, 1707.69 )
 
 [node name="enemy22" parent="enemies" instance=ExtResource( 10 )]
 
-transform/pos = Vector2( 6932.99, 1494.95 )
+transform/pos = Vector2( 6932.99, 1499.47 )
 
 [node name="enemy23" parent="enemies" instance=ExtResource( 10 )]
 
-transform/pos = Vector2( 8088.73, 1496.26 )
+transform/pos = Vector2( 8088.73, 1500.78 )
 
 [node name="enemy24" parent="enemies" instance=ExtResource( 10 )]
 
@@ -453,15 +454,15 @@ transform/pos = Vector2( 11692.6, 1286.54 )
 
 [node name="enemy31" parent="enemies" instance=ExtResource( 10 )]
 
-transform/pos = Vector2( 10457.6, 1496.46 )
+transform/pos = Vector2( 10457.6, 1497.97 )
 
 [node name="enemy32" parent="enemies" instance=ExtResource( 10 )]
 
-transform/pos = Vector2( 12141.1, 1489.78 )
+transform/pos = Vector2( 12139.9, 1495.92 )
 
 [node name="enemy33" parent="enemies" instance=ExtResource( 10 )]
 
-transform/pos = Vector2( 12481.9, 1496.45 )
+transform/pos = Vector2( 12481.9, 1497.68 )
 
 [node name="parallax_bg" parent="." instance=ExtResource( 11 )]
 
@@ -502,6 +503,8 @@ drag_margin/right = 0.2
 drag_margin/bottom = 0.2
 
 [node name="mail" type="Node" parent="."]
+
+editor/display_folded = true
 
 [node name="mail" parent="mail" instance=ExtResource( 12 )]
 
@@ -657,26 +660,54 @@ transform/pos = Vector2( 10929.4, 1558.3 )
 
 transform/pos = Vector2( 2229.15, 1479.52 )
 
+[node name="cat3" parent="cat" instance=ExtResource( 13 )]
+
+transform/pos = Vector2( 6757.71, 1473.09 )
+
+[node name="cat2" parent="cat" instance=ExtResource( 13 )]
+
+transform/pos = Vector2( 10711, 1470.44 )
+
+[node name="dog" type="Node" parent="."]
+
+[node name="dog1" type="Area2D" parent="dog"]
+
+transform/pos = Vector2( 100, 100 )
+input/pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+script/script = ExtResource( 14 )
+
 [node name="tv" type="Node" parent="."]
 
-[node name="tv1" parent="tv" instance=ExtResource( 14 )]
+[node name="tv1" parent="tv" instance=ExtResource( 15 )]
 
 transform/pos = Vector2( 4574.17, 1480.29 )
 
-[node name="tv2" parent="tv" instance=ExtResource( 14 )]
+[node name="tv2" parent="tv" instance=ExtResource( 15 )]
 
 transform/pos = Vector2( 5993.87, 1414.16 )
 
 [node name="phone" type="Node" parent="."]
 
-[node name="phone1" parent="phone" instance=ExtResource( 15 )]
+[node name="phone1" parent="phone" instance=ExtResource( 16 )]
 
-transform/pos = Vector2( 3907.9, 1310.26 )
+transform/pos = Vector2( 3757.94, 1481.42 )
+
+[node name="phone2" parent="phone" instance=ExtResource( 16 )]
+
+transform/pos = Vector2( 9431.14, 1491.73 )
 
 [node name="icecream" type="Node" parent="."]
 
-[node name="icecream1" parent="icecream" instance=ExtResource( 16 )]
+[node name="icecream1" parent="icecream" instance=ExtResource( 17 )]
 
 transform/pos = Vector2( 3332.89, 1352.61 )
+
+[node name="icecream2" parent="icecream" instance=ExtResource( 17 )]
+
+transform/pos = Vector2( 8195.54, 1493.58 )
 
 
