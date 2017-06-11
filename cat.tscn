@@ -176,7 +176,7 @@ script/script = ExtResource( 1 )
 
 input/pickable = false
 shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 0.741308, 0, 0, 3.35237, 0, 5.69432 )
+shapes/0/transform = Matrix32( 0.741308, 0, 0, 2.98241, 0, 0.655324 )
 shapes/0/trigger = false
 collision/layers = 1
 collision/mask = 1
@@ -203,8 +203,8 @@ hframes = 7
 
 [node name="collision" type="CollisionShape2D" parent="distraction"]
 
-transform/pos = Vector2( 0, 5.69432 )
-transform/scale = Vector2( 0.741308, 3.35237 )
+transform/pos = Vector2( 0, 0.655324 )
+transform/scale = Vector2( 0.741308, 2.98241 )
 shape = SubResource( 1 )
 trigger = false
 _update_shape_index = 0

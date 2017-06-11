@@ -173,7 +173,7 @@ angular_damp = 1.0
 
 input/pickable = false
 shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 0.25372, 0, 0, 1.7492, 1.5675, 7.51279 )
+shapes/0/transform = Matrix32( 0.275816, 0, 0, 1.98052, 2.6859, 10.6634 )
 shapes/0/trigger = false
 collision/layers = 1
 collision/mask = 1
@@ -201,8 +201,8 @@ hframes = 5
 
 [node name="collision" type="CollisionShape2D" parent="distraction"]
 
-transform/pos = Vector2( 1.5675, 7.51279 )
-transform/scale = Vector2( 0.25372, 1.7492 )
+transform/pos = Vector2( 2.6859, 10.6634 )
+transform/scale = Vector2( 0.275816, 1.98052 )
 shape = SubResource( 1 )
 trigger = false
 _update_shape_index = 0
