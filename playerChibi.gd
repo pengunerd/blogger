@@ -255,9 +255,9 @@ func _on_player_body_enter(body):
 			# check where chibi is coming from and bounce in opposite direction
 			# if chibi pos is less than distraction position (coming from left), then bounce left, otherwise bounce right
 			if(chibi_pos < distraction_pos):
-				self.apply_impulse(Vector2(0,0),Vector2(-60000,10))
+				self.apply_impulse(Vector2(0,0),Vector2(-45000,10))
 			else:
-				self.apply_impulse(Vector2(0,0),Vector2(60000,10))
+				self.apply_impulse(Vector2(0,0),Vector2(45000,10))
 	#print(chibi_pos)
 
 

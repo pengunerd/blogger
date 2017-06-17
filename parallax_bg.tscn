@@ -1,15 +1,8 @@
-[gd_scene load_steps=11 format=1]
+[gd_scene load_steps=4 format=1]
 
 [ext_resource path="res://scroll_bg_sky.png" type="Texture" id=1]
 [ext_resource path="res://bg_grasslands.png" type="Texture" id=2]
-[ext_resource path="res://cloud1.png" type="Texture" id=3]
-[ext_resource path="res://scroll_bg_cloud_1.png" type="Texture" id=4]
-[ext_resource path="res://cloud2.png" type="Texture" id=5]
-[ext_resource path="res://cloud3.png" type="Texture" id=6]
-[ext_resource path="res://scroll_bg_cloud_3.png" type="Texture" id=7]
-[ext_resource path="res://scroll_bg_fg_2.png" type="Texture" id=8]
-[ext_resource path="res://background-grass-plants2.png" type="Texture" id=9]
-[ext_resource path="res://background-grass.png" type="Texture" id=10]
+[ext_resource path="res://scroll_bg_fg_2.png" type="Texture" id=3]
 
 [node name="parallax_bg" type="ParallaxBackground"]
 
@@ -61,43 +54,6 @@ transform/pos = Vector2( 400, 240 )
 transform/scale = Vector2( 0.792969, 1 )
 texture = ExtResource( 2 )
 
-[node name="clouds" type="ParallaxLayer" parent="."]
-
-visibility/visible = false
-motion/scale = Vector2( 0.1, 1 )
-motion/offset = Vector2( 0, 0 )
-motion/mirroring = Vector2( 800, 0 )
-
-[node name="Sprite" type="Sprite" parent="clouds"]
-
-transform/pos = Vector2( 45.6849, 135.162 )
-texture = ExtResource( 3 )
-centered = false
-
-[node name="Sprite 2" type="Sprite" parent="clouds"]
-
-transform/pos = Vector2( 452.974, 92.0187 )
-texture = ExtResource( 4 )
-centered = false
-
-[node name="Sprite 3" type="Sprite" parent="clouds"]
-
-transform/pos = Vector2( 311.803, 21.5133 )
-texture = ExtResource( 5 )
-centered = false
-
-[node name="Sprite 5" type="Sprite" parent="clouds"]
-
-transform/pos = Vector2( 639.986, 111.747 )
-texture = ExtResource( 6 )
-centered = false
-
-[node name="Sprite 6" type="Sprite" parent="clouds"]
-
-transform/pos = Vector2( 181.545, 75.4414 )
-texture = ExtResource( 7 )
-centered = false
-
 [node name="mount_ 2" type="ParallaxLayer" parent="."]
 
 visibility/visible = false
@@ -108,7 +64,7 @@ motion/mirroring = Vector2( 800, 0 )
 [node name="Sprite" type="Sprite" parent="mount_ 2"]
 
 transform/pos = Vector2( 0, 225 )
-texture = ExtResource( 8 )
+texture = ExtResource( 3 )
 centered = false
 region = true
 region_rect = Rect2( 0, 0, 800, 256 )
@@ -125,7 +81,6 @@ motion/mirroring = Vector2( 800, 0 )
 
 transform/pos = Vector2( 0, 50.1194 )
 transform/scale = Vector2( 0.781, 0.781 )
-texture = ExtResource( 9 )
 centered = false
 region = true
 region_rect = Rect2( 0, 0, 1024, 512 )
@@ -134,6 +89,5 @@ region_rect = Rect2( 0, 0, 1024, 512 )
 
 transform/pos = Vector2( 399.014, 375.687 )
 transform/scale = Vector2( 0.781, 0.781 )
-texture = ExtResource( 10 )
 
 

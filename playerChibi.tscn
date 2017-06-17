@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=1]
+[gd_scene load_steps=42 format=1]
 
 [ext_resource path="res://playerChibi.gd" type="Script" id=1]
 [ext_resource path="res://player/chibi-girl1.png" type="Texture" id=2]
@@ -20,7 +20,8 @@
 [ext_resource path="res://images/email.png" type="Texture" id=18]
 [ext_resource path="res://enemy2.png" type="Texture" id=19]
 [ext_resource path="res://images/game_over.png" type="Texture" id=20]
-[ext_resource path="res://basepack_ground_collision/boxItem.png" type="Texture" id=21]
+[ext_resource path="res://images/menu-left.png" type="Texture" id=21]
+[ext_resource path="res://images/menu-right.png" type="Texture" id=22]
 
 [sub_resource type="RayShape2D" id=1]
 
@@ -403,6 +404,24 @@ offset = Vector2( 0, 0 )
 rotation = 0.0
 scale = Vector2( 0.5, 0.5 )
 
+[node name="url" type="Label" parent="hud"]
+
+rect/scale = Vector2( 0.9, 0.9 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 32.0
+margin/top = 905.0
+margin/right = 292.0
+margin/bottom = 941.0
+custom_fonts/font = ExtResource( 12 )
+custom_colors/font_color = Color( 0.195644, 0.00822449, 0.300781, 1 )
+text = "BloggerToBlogger.com"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
 [node name="label_time" type="Label" parent="hud"]
 
 rect/scale = Vector2( 1.3, 1.3 )
@@ -463,6 +482,7 @@ transform/pos = Vector2( 1360.7, 103.414 )
 transform/scale = Vector2( 2, 2 )
 frames = SubResource( 16 )
 animation = "label_mail"
+frame = 2
 playing = true
 
 [node name="label_mail_counter5" type="Sprite" parent="hud"]
@@ -501,7 +521,6 @@ autoplay = "label_enemy_animation"
 transform/pos = Vector2( 1403.86, 177.807 )
 texture = ExtResource( 19 )
 hframes = 8
-frame = 4
 
 [node name="enemy_counter" type="Label" parent="hud"]
 
@@ -558,20 +577,21 @@ color/color_ramp = SubResource( 19 )
 
 [node name="restartButton" type="TextureButton" parent="hud"]
 
-visibility/visible = false
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 1140.0
-margin/top = 340.0
-margin/right = 1210.0
-margin/bottom = 410.0
+margin/left = 32.0
+margin/top = 38.0
+margin/right = 109.0
+margin/bottom = 192.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 textures/normal = ExtResource( 21 )
+textures/hover = ExtResource( 22 )
 params/resize_mode = 0
+params/scale = Vector2( 1.3, 1.3 )
 params/stretch_mode = 0
 
 [connection signal="body_enter" from="." to="." method="_on_player_body_enter"]
