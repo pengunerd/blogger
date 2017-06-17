@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=1]
+[gd_scene load_steps=6 format=1]
 
 [ext_resource path="res://scroll_bg_sky.png" type="Texture" id=1]
 [ext_resource path="res://bg_grasslands.png" type="Texture" id=2]
-[ext_resource path="res://scroll_bg_fg_2.png" type="Texture" id=3]
+[ext_resource path="res://cloud1.png" type="Texture" id=3]
+[ext_resource path="res://cloud3.png" type="Texture" id=4]
+[ext_resource path="res://cloud4.png" type="Texture" id=5]
 
 [node name="parallax_bg" type="ParallaxBackground"]
 
@@ -32,9 +34,9 @@ centered = false
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="."]
 
-motion/scale = Vector2( 1, 1 )
+motion/scale = Vector2( 0.2, 1 )
 motion/offset = Vector2( 0, 0 )
-motion/mirroring = Vector2( 1010, 0 )
+motion/mirroring = Vector2( 0, 0 )
 
 [node name="ColorFrame" type="ColorFrame" parent="ParallaxLayer"]
 
@@ -48,26 +50,82 @@ margin/right = 1080.0
 margin/bottom = 480.0
 color = Color( 0.85098, 1, 1, 1 )
 
-[node name="Sprite" type="Sprite" parent="ParallaxLayer"]
+[node name="bg_grasslands" type="Sprite" parent="ParallaxLayer"]
 
 transform/pos = Vector2( 400, 240 )
-transform/scale = Vector2( 0.792969, 1 )
 texture = ExtResource( 2 )
+region = true
+region_rect = Rect2( 0, 0, 10240, 512 )
 
-[node name="mount_ 2" type="ParallaxLayer" parent="."]
+[node name="clouds" type="ParallaxLayer" parent="."]
 
-visibility/visible = false
-motion/scale = Vector2( 0.2, 1 )
+motion/scale = Vector2( 0.05, 1 )
 motion/offset = Vector2( 0, 0 )
-motion/mirroring = Vector2( 800, 0 )
+motion/mirroring = Vector2( 1024, 0 )
 
-[node name="Sprite" type="Sprite" parent="mount_ 2"]
+[node name="cloud1a" type="Sprite" parent="clouds"]
 
-transform/pos = Vector2( 0, 225 )
+transform/pos = Vector2( 168.835, 35.0451 )
 texture = ExtResource( 3 )
 centered = false
 region = true
-region_rect = Rect2( 0, 0, 800, 256 )
+region_rect = Rect2( 0, 0, 128, 71 )
+
+[node name="cloud1a2" type="Sprite" parent="clouds"]
+
+transform/pos = Vector2( 1444.42, 94.0639 )
+texture = ExtResource( 3 )
+centered = false
+region = true
+region_rect = Rect2( 0, 0, 128, 71 )
+
+[node name="cloud1a3" type="Sprite" parent="clouds"]
+
+transform/pos = Vector2( 682, 137 )
+texture = ExtResource( 3 )
+centered = false
+region = true
+region_rect = Rect2( 0, 0, 128, 71 )
+
+[node name="cloud3a" type="Sprite" parent="clouds"]
+
+transform/pos = Vector2( 1190, 6.99986 )
+texture = ExtResource( 4 )
+centered = false
+region = true
+region_rect = Rect2( 0, 0, 128, 71 )
+
+[node name="cloud3a1" type="Sprite" parent="clouds"]
+
+transform/pos = Vector2( 319.387, 6.85485 )
+texture = ExtResource( 4 )
+centered = false
+region = true
+region_rect = Rect2( 0, 0, 128, 71 )
+
+[node name="cloud3a2" type="Sprite" parent="clouds"]
+
+transform/pos = Vector2( 463, 26.9999 )
+texture = ExtResource( 4 )
+centered = false
+region = true
+region_rect = Rect2( 0, 0, 128, 71 )
+
+[node name="cloud3a3" type="Sprite" parent="clouds"]
+
+transform/pos = Vector2( 823.001, 34.9999 )
+texture = ExtResource( 4 )
+centered = false
+region = true
+region_rect = Rect2( 0, 0, 128, 71 )
+
+[node name="cloud4" type="Sprite" parent="clouds"]
+
+transform/pos = Vector2( 169.59, 114.052 )
+texture = ExtResource( 5 )
+centered = false
+region = true
+region_rect = Rect2( 0, 0, 128, 71 )
 
 [node name="mount_1" type="ParallaxLayer" parent="."]
 

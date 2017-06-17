@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=1]
+
+[ext_resource path="res://basepack_grass_noOFFSET.xml" type="TileSet" id=1]
+[ext_resource path="res://playerChibi.tscn" type="PackedScene" id=2]
+[ext_resource path="res://parallax_test.tscn" type="PackedScene" id=3]
+
+[node name="alpha_test" type="Node"]
+
+[node name="grass" type="TileMap" parent="."]
+
+mode = 0
+tile_set = ExtResource( 1 )
+cell/size = Vector2( 70, 70 )
+cell/quadrant_size = 16
+cell/custom_transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+cell/half_offset = 2
+cell/tile_origin = 0
+cell/y_sort = false
+collision/use_kinematic = false
+collision/friction = 1.0
+collision/bounce = 0.0
+collision/layers = 1
+collision/mask = 1
+occluder/light_mask = 1
+tile_data = IntArray( 1048624, 1, 1048625, 1, 1048626, 1, 1048627, 1, 1048628, 1, 1048629, 1, 1048630, 1, 1048631, 1, 1179648, 0, 1179649, 0, 1179650, 0, 1179651, 0, 1179652, 0, 1179653, 0, 1179654, 0, 1179655, 0, 1179656, 0, 1179657, 0, 1179658, 0, 1179659, 0, 1179660, 0, 1179661, 0, 1179662, 0, 1179663, 0, 1179664, 0, 1179665, 0, 1179666, 0, 1179667, 0, 1179668, 0, 1179669, 0, 1179670, 0, 1179671, 0, 1179672, 0, 1179673, 0, 1179674, 0, 1179675, 0, 1179676, 1, 1179677, 1, 1179678, 1, 1179679, 1, 1179680, 1, 1179681, 1, 1179682, 1, 1179683, 1, 1179684, 1, 1179685, 1, 1179686, 1, 1179687, 1, 1179688, 1, 1245225, 1, 1245226, 1, 1245227, 1, 1245228, 1, 1245229, 1, 1245230, 1, 1245231, 1, 1245232, 1 )
+
+[node name="player" parent="." instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 179.494, 1142.85 )
+
+[node name="parallax_test" parent="." instance=ExtResource( 3 )]
+
+

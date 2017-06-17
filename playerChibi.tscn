@@ -199,7 +199,7 @@ shapes/1/trigger = false
 collision/layers = 1
 collision/mask = 1
 mode = 2
-mass = 100.0
+mass = 51.02
 friction = 0.1
 bounce = 0.0
 gravity_scale = 1.0
@@ -482,7 +482,7 @@ transform/pos = Vector2( 1360.7, 103.414 )
 transform/scale = Vector2( 2, 2 )
 frames = SubResource( 16 )
 animation = "label_mail"
-frame = 2
+frame = 1
 playing = true
 
 [node name="label_mail_counter5" type="Sprite" parent="hud"]
