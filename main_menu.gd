@@ -4,7 +4,7 @@ func _ready():
 	# Get game_state best_score and associated best_time from file
 	var best_score = get_node("/root/game_state").best_score
 	var elapsed = get_node("/root/game_state").best_time
-	
+	#print(elapsed)
 	#cast elapsed to integer because it became a float when adding milliseconds feature
 	var minutes = int(elapsed) / 60
 	var seconds = int(elapsed) % 60
