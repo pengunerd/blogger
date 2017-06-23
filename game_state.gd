@@ -7,15 +7,15 @@ var mail_score = 0
 var enemy_score = 12
 
 # Bootstrapping scores; best_time == 9999 initially 
-var best_time = 9999
+var best_time = 99999999
 var best_score = 0
 var user_time_completed = 0
 
 func setup_game():
-	# Want to get highest numnber of mails collected (mail_score) before killing all enemies (enemy_score)
+	# Want to get highest number of mails collected (mail_score) before killing all enemies (enemy_score)
 	# When enemy_score == 0, game over!
 	mail_score = 0
-	enemy_score = 12
+	enemy_score = 2
 	user_time_completed = 0
 	#print("Resetting game state: ", mail_score,enemy_score,user_time_completed)
 

@@ -68,7 +68,8 @@ func _integrate_forces(s):
 						get_node("/root/stage/player/hud/restartButton").show()
 						# stop updates to timer + game state
 						get_node("/root/stage/player/hud/timer").stopTimer()
-					
+						#change scene to game complete
+						get_tree().change_scene("res://game_complete.tscn")
 					break
 			
 			if (dp.x > 0.9):

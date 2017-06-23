@@ -286,7 +286,7 @@ func _process(delta):
 # can probably delete if we still want to let player move after game over
 func stop():
 	set_process(false)
-	print("stopping player??")
+	print("stopping player time + score")
 
 	
 #	if !Globals.has_singleton("Facebook"):
