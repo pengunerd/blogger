@@ -482,6 +482,7 @@ transform/pos = Vector2( 1360.7, 103.414 )
 transform/scale = Vector2( 2, 2 )
 frames = SubResource( 16 )
 animation = "label_mail"
+frame = 3
 playing = true
 
 [node name="label_mail_counter5" type="Sprite" parent="hud"]

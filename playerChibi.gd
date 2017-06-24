@@ -54,19 +54,36 @@ var enemy
 var chibi_pos
 var cat_pos
 
+# controls variables
+var move_left
+var move_right
+var jump
+var shoot
+var spawn
+var controlsEnabled=true
+
+func setControls():
+	# Set the controls
+	if(controlsEnabled):
+		move_left = Input.is_action_pressed("move_left")
+		move_right = Input.is_action_pressed("move_right")
+		jump = Input.is_action_pressed("jump")
+		shoot = Input.is_action_pressed("shoot")
+		spawn = Input.is_action_pressed("spawn")
+	else:
+		move_left = Input.is_action_pressed("ui_down")
+		move_right = Input.is_action_pressed("ui_down")
+		jump = Input.is_action_pressed("ui_down")
+		shoot = Input.is_action_pressed("ui_down")
+		spawn = Input.is_action_pressed("ui_down")
+
 func _integrate_forces(s):
 	var lv = s.get_linear_velocity()
 	var step = s.get_step()
-	
 	var new_anim = anim
 	var new_siding_left = siding_left
 	
-	# Get the controls
-	var move_left = Input.is_action_pressed("move_left")
-	var move_right = Input.is_action_pressed("move_right")
-	var jump = Input.is_action_pressed("jump")
-	var shoot = Input.is_action_pressed("shoot")
-	var spawn = Input.is_action_pressed("spawn")
+	setControls()
 	
 	#if is_colliding():	# colliding with Static, Kinematic, Rigid
 		# do something

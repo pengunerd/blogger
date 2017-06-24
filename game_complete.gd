@@ -1,5 +1,6 @@
 extends Node
 
+var username=""
 var best_score=0;
 var elapsed=0;
 var fields="";
@@ -28,32 +29,16 @@ func _ready():
 	get_node("/root/game_complete/player/hud/label_enemy").hide()
 	get_node("/root/game_complete/player/hud/enemy_counter").hide()
 	
-	createStringFields()
 	pass
 
 func createStringFields():
-	fields ="username=guest" + "&highscore=" + str(best_score) + "&gametime=" + str(elapsed)
+	fields ="username=" + username + "&highscore=" + str(best_score) + "&gametime=" + str(elapsed)
 	print(fields)
 
-func _on_connect_pressed():
-	print("Pressed")
-	#show uploadStatus message
-	get_node("hud/uploadStatus").set_opacity(1)
-	#hide upload buitton after pressing
-	get_node("hud/connect").hide()
-	##### timeout to allow uploadStatus to show #####
-	var t = Timer.new()
-	t.set_wait_time(2)
-	t.set_one_shot(true)
-	self.add_child(t)
-	t.start()
-	yield(t, "timeout")
-	
-	## upload the score
-	uploadScore()
-	pass # replace with function body
 
 func uploadScore():
+	# create the string fields to be sent
+	createStringFields()
 	var err=0
 	var http = HTTPClient.new() # Create the Client
 	
@@ -130,4 +115,50 @@ func uploadScore():
 	print("Text: ",text)
 	get_node("hud/upload_animation").play("upload_successful")
 	#get_node("hud/uploadStatus").set_text("Upload Complete! Thanks for Playing! ")
+
+
+
+func _on_usernameConfirm_pressed():
+	# animation to hide username_label+children then display upload Status
+	get_node("hud/upload_animation").play("username_entered")
+	# Hide username input, show upload/connect button
+	"""
+	get_node("hud/username_label").set_opacity(0)
+	get_node("hud/usernameInput").set_opacity(0)
+	get_node("hud/usernameConfirm").set_opacity(0)
+	"""
+	print("Upload pressed")
+	#show uploadStatus message
+	get_node("hud/uploadStatus").set_opacity(1)
+
+	##### timeout to allow uploadStatus to show #####
+	var t = Timer.new()
+	t.set_wait_time(2)
+	t.set_one_shot(true)
+	self.add_child(t)
+	t.start()
+	yield(t, "timeout")
+	
+	## upload the score
+	uploadScore()
+	
+	pass # replace with function body
+
+
+# disable player stuff on username input focus
+func _on_usernameInput_focus_enter():
+	get_node("/root/game_complete/player").controlsEnabled=false
+
+# re-enable player stuff on username input focus
+func _on_usernameInput_focus_exit():
+	get_node("/root/game_complete/player").controlsEnabled=true
+
+# detect user input if enter is pressed
+func _on_usernameInput_input_event( ev ):
+	if(Input.is_action_pressed("ui_confirm")):
+		print("ENTER PRESSED")
+		get_node("hud/username_label/usernameConfirm").emit_signal("pressed")
+		username=get_node("hud/username_label/usernameInput").get_text()
+		print("Saving username " + username)
+	pass # replace with function body
 

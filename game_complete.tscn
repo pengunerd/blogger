@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=1]
+[gd_scene load_steps=9 format=1]
 
 [ext_resource path="res://game_complete.gd" type="Script" id=1]
 [ext_resource path="res://basepack_grass_noOFFSET.xml" type="TileSet" id=2]
 [ext_resource path="res://playerChibi.tscn" type="PackedScene" id=3]
 [ext_resource path="res://parallax_test.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Oswald-regular-44.fnt" type="BitmapFont" id=5]
+[ext_resource path="res://images/button-instructions.png" type="Texture" id=6]
 
 [sub_resource type="Animation" id=1]
 
@@ -24,6 +25,33 @@ tracks/0/keys = {
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("uploadComplete:visibility/opacity")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 0.5, 1 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+
+[sub_resource type="Animation" id=2]
+
+resource/name = "username_entered"
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("username_label:visibility/opacity")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0, 0.5 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ 1.0, 0.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("uploadStatus:visibility/opacity")
 tracks/1/interp = 1
 tracks/1/imported = false
 tracks/1/keys = {
@@ -144,34 +172,78 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="connect" type="Button" parent="hud"]
-
-rect/scale = Vector2( 2, 2 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 242.0
-margin/top = 45.0
-margin/right = 340.0
-margin/bottom = 74.0
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-text = "upload score!"
-flat = false
-
 [node name="upload_animation" type="AnimationPlayer" parent="hud"]
 
 playback/process_mode = 1
 playback/default_blend_time = 0.0
 root/root = NodePath("..")
 anims/upload_successful = SubResource( 1 )
+anims/username_entered = SubResource( 2 )
 playback/active = true
 playback/speed = 1.0
 blend_times = [  ]
 autoplay = ""
 
-[connection signal="pressed" from="hud/connect" to="." method="_on_connect_pressed"]
+[node name="username_label" type="Label" parent="hud"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 134.0
+margin/top = 62.0
+margin/right = 256.0
+margin/bottom = 98.0
+custom_fonts/font = ExtResource( 5 )
+custom_colors/font_color = Color( 0.0829163, 0.558594, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Username:"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="usernameInput" type="TextEdit" parent="hud/username_label"]
+
+hint/tooltip = "Enter your username here!"
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 130.0
+margin/top = -3.0
+margin/right = 335.0
+margin/bottom = 45.0
+custom_fonts/font = ExtResource( 5 )
+syntax_highlighting = false
+show_line_numbers = false
+highlight_all_occurrences = false
+caret/block_caret = false
+caret/caret_blink = true
+caret/caret_blink_speed = 0.65
+
+[node name="usernameConfirm" type="TextureButton" parent="hud/username_label"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 339.0
+margin/top = -10.0
+margin/right = 466.0
+margin/bottom = 48.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 6 )
+params/resize_mode = 0
+params/stretch_mode = 0
+
+[connection signal="focus_enter" from="hud/username_label/usernameInput" to="." method="_on_usernameInput_focus_enter"]
+
+[connection signal="focus_exit" from="hud/username_label/usernameInput" to="." method="_on_usernameInput_focus_exit"]
+
+[connection signal="input_event" from="hud/username_label/usernameInput" to="." method="_on_usernameInput_input_event"]
+
+[connection signal="pressed" from="hud/username_label/usernameConfirm" to="." method="_on_usernameConfirm_pressed"]
 
 
