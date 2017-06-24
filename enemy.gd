@@ -61,15 +61,18 @@ func _integrate_forces(s):
 					print("Number Enemies Left: ",number_EnemyLeft)
 					if(number_EnemyLeft==0):
 						print("No more enemies!")
+						get_node("/root/game_state").game_over()
+						#below Code moved to game_state
+						"""
 						get_node("/root/stage/player/hud/game_over").show()
 						get_node("/root/stage/player").stop()
-						get_node("/root/game_state").game_over()
 						
-						get_node("/root/stage/player/hud/restartButton").show()
+						# commenting out this so we DON'T save highscore to file system
+						#get_node("/root/game_state").game_over_file_save()
+						#get_node("/root/stage/player/hud/restartButton").show()
 						# stop updates to timer + game state
 						get_node("/root/stage/player/hud/timer").stopTimer()
-						#change scene to game complete
-						get_tree().change_scene("res://game_complete.tscn")
+						"""
 					break
 			
 			if (dp.x > 0.9):

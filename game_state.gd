@@ -6,6 +6,9 @@ extends Node
 var mail_score = 0
 var enemy_score = 12
 
+# Seconds to delay before changing scene
+var game_over_delay_scene_change=3
+
 # Bootstrapping scores; best_time == 9999 initially 
 var best_time = 99999999
 var best_score = 0
@@ -28,10 +31,29 @@ func _ready():
 		best_time = f.get_var()
 		best_score = f.get_var()
 
-
-
-
 func game_over():
+	get_node("/root/stage/player/hud/game_over").show()
+	get_node("/root/stage/player").stop()
+	
+	#get_node("/root/stage/player/hud/restartButton").show()
+	# stop updates to timer + game state
+	get_node("/root/stage/player/hud/timer").stopTimer()
+	
+	#Execute function to change scene to game_complete
+	##### timeout delay before change to game complete #####
+	var timeout_complete = Timer.new()
+	timeout_complete.set_wait_time(game_over_delay_scene_change)
+	timeout_complete.set_one_shot(true)
+	self.add_child(timeout_complete)
+	timeout_complete.start()
+	yield(timeout_complete, "timeout")
+	print("Changing to Game Complete scene")
+	
+	#change scene to game complete
+	get_tree().change_scene("res://game_complete.tscn")
+
+
+func game_over_file_save():
 	# set BEST score = mail score (number of mails user collected) if it is higher
 	if(mail_score > best_score):
 		best_score = mail_score

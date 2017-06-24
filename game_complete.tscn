@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=1]
+[gd_scene load_steps=7 format=1]
 
 [ext_resource path="res://game_complete.gd" type="Script" id=1]
 [ext_resource path="res://basepack_grass_noOFFSET.xml" type="TileSet" id=2]
@@ -6,13 +6,40 @@
 [ext_resource path="res://parallax_test.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Oswald-regular-44.fnt" type="BitmapFont" id=5]
 
+[sub_resource type="Animation" id=1]
+
+resource/name = "upload_successful"
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("uploadStatus:visibility/opacity")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0, 0.5 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ 1.0, 0.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("uploadComplete:visibility/opacity")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 0.5, 1 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+
 [node name="game_complete" type="Node"]
 
 script/script = ExtResource( 1 )
 
 [node name="grass" type="TileMap" parent="."]
 
-transform/pos = Vector2( -223.125, 1.22766 )
+transform/pos = Vector2( -349.64, 14.8314 )
 mode = 0
 tile_set = ExtResource( 2 )
 cell/size = Vector2( 70, 70 )
@@ -71,13 +98,48 @@ focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
-margin/left = 284.0
-margin/top = 189.0
-margin/right = 359.0
-margin/bottom = 225.0
+margin/left = 279.0
+margin/top = 155.0
+margin/right = 354.0
+margin/bottom = 191.0
 custom_fonts/font = ExtResource( 5 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Time: "
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="uploadStatus" type="Label" parent="hud"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 141.0
+margin/top = 194.0
+margin/right = 624.0
+margin/bottom = 230.0
+custom_fonts/font = ExtResource( 5 )
+custom_colors/font_color = Color( 1, 0.5625, 0, 1 )
+text = "Uploading Score, this may take a minute..."
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="uploadComplete" type="Label" parent="hud"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 153.0
+margin/top = 194.0
+margin/right = 595.0
+margin/bottom = 230.0
+custom_fonts/font = ExtResource( 5 )
+custom_colors/font_color = Color( 0.0829163, 0.558594, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Upload Successful! Thanks for Playing!"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
@@ -98,6 +160,17 @@ enabled_focus_mode = 2
 shortcut = null
 text = "upload score!"
 flat = false
+
+[node name="upload_animation" type="AnimationPlayer" parent="hud"]
+
+playback/process_mode = 1
+playback/default_blend_time = 0.0
+root/root = NodePath("..")
+anims/upload_successful = SubResource( 1 )
+playback/active = true
+playback/speed = 1.0
+blend_times = [  ]
+autoplay = ""
 
 [connection signal="pressed" from="hud/connect" to="." method="_on_connect_pressed"]
 

@@ -19,8 +19,14 @@ func _ready():
 	get_node("hud/score").set_text("Mails Collected: " + str(best_score))
 	get_node("hud/time").set_text("Time: " + str_elapsed)
 	
-	#Hide player timer because it resets
+	# Initially set uploadStatus + uploadComplete label to invisible:
+	get_node("hud/uploadStatus").set_opacity(0)
+	get_node("hud/uploadComplete").set_opacity(0)
+	#Hide player timer because it resets; hide time and enemy label because we don't need it here
+	get_node("/root/game_complete/player/hud/label_time").hide()
 	get_node("/root/game_complete/player/hud/timer").hide()
+	get_node("/root/game_complete/player/hud/label_enemy").hide()
+	get_node("/root/game_complete/player/hud/enemy_counter").hide()
 	
 	createStringFields()
 	pass
@@ -31,6 +37,19 @@ func createStringFields():
 
 func _on_connect_pressed():
 	print("Pressed")
+	#show uploadStatus message
+	get_node("hud/uploadStatus").set_opacity(1)
+	#hide upload buitton after pressing
+	get_node("hud/connect").hide()
+	##### timeout to allow uploadStatus to show #####
+	var t = Timer.new()
+	t.set_wait_time(2)
+	t.set_one_shot(true)
+	self.add_child(t)
+	t.start()
+	yield(t, "timeout")
+	
+	## upload the score
 	uploadScore()
 	pass # replace with function body
 
@@ -109,3 +128,6 @@ func uploadScore():
 	print("bytes got: ",rb.size())
 	var text = rb.get_string_from_ascii()
 	print("Text: ",text)
+	get_node("hud/upload_animation").play("upload_successful")
+	#get_node("hud/uploadStatus").set_text("Upload Complete! Thanks for Playing! ")
+
