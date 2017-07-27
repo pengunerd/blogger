@@ -15,7 +15,7 @@ func _ready():
 	var str_elapsed = "%01dm %02d.%01ds" % [minutes, seconds, milliseconds_display]
 	
 	# hardcode if elapsed time==9999 (default starting), then don't display anything; else display best time
-	if(elapsed == 9999):
+	if(elapsed == 99999999):
 		get_node("time").set_text("Time: ")
 	else:
 		get_node("time").set_text("Time: " + str_elapsed)

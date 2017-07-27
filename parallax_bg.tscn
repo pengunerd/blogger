@@ -59,6 +59,7 @@ region_rect = Rect2( 0, 0, 10240, 512 )
 
 [node name="clouds" type="ParallaxLayer" parent="."]
 
+visibility/visible = false
 motion/scale = Vector2( 0.05, 1 )
 motion/offset = Vector2( 0, 0 )
 motion/mirroring = Vector2( 1024, 0 )
