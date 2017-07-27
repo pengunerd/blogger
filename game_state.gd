@@ -4,6 +4,7 @@ extends Node
 # Want to get highest numnber of mails collected (mail_score) before killing all enemies (enemy_score)
 # When enemy_score == 0, game over!
 var mail_score = 0
+var enemy_score = 31
 
 # Seconds to delay before changing scene
 var game_over_delay_scene_change=3
@@ -17,6 +18,7 @@ func setup_game():
 	# Want to get highest number of mails collected (mail_score) before killing all enemies (enemy_score)
 	# When enemy_score == 0, game over!
 	mail_score = 0
+	enemy_score = 31
 	user_time_completed = 0
 	#print("Resetting game state: ", mail_score,enemy_score,user_time_completed)
 
