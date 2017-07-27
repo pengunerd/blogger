@@ -6,16 +6,19 @@
 [ext_resource path="res://sound_coin.wav" type="Sample" id=4]
 [ext_resource path="res://bullet.png" type="Texture" id=5]
 [ext_resource path="res://images/spark_particle2.png" type="Texture" id=6]
-[ext_resource path="res://basepack_grass_noOFFSET.xml" type="TileSet" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 139.365, 10.6203 )
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="RectangleShape2D" id=2]
 
-resource/name = "idle_move"
+custom_solver_bias = 0.0
+extents = Vector2( 104.128, 8.91237 )
+
+[sub_resource type="Animation" id=3]
+
 length = 2.5
 loop = true
 step = 0.05
@@ -30,12 +33,11 @@ tracks/0/keys = {
 "values": [ 0, 1, 2, 3, 4, 5, 6, 5, 4, 3, 2 ]
 }
 
-[sub_resource type="Animation" id=8]
+[sub_resource type="Animation" id=4]
 
-resource/name = "mushroom bounce"
 length = 3.5
 loop = true
-step = 0.1
+step = 0.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("test/sprite:frame")
 tracks/0/interp = 1
@@ -54,10 +56,20 @@ tracks/1/keys = {
 "times": FloatArray( 0, 0.5, 1, 1.5, 2, 2.5, 3 ),
 "transitions": FloatArray( 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( -0.474297, -95.3657 ), Vector2( -1.9516, -76.3479 ), Vector2( -0.558238, -50.4916 ), Vector2( 0.183181, -28.9849 ), Vector2( -0.0940638, -1.08742 ), Vector2( -0.778774, -28.2581 ), Vector2( -1.66722, -49.5151 ) ]
+"values": [ Vector2( 28.8016, -21.8083 ), Vector2( 29.0456, -16.5542 ), Vector2( 29.4928, -9.89138 ), Vector2( 29.5986, -3.82252 ), Vector2( 29.6433, 3.78832 ), Vector2( 29.3627, -4.74389 ), Vector2( 29.0822, -9.62107 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("test:bounce")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = {
+"times": FloatArray(  ),
+"transitions": FloatArray(  ),
+"update": 0,
+"values": [  ]
 }
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=5]
 
 length = 8.0
 loop = false
@@ -105,9 +117,8 @@ tracks/3/keys = {
 } ]
 }
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=6]
 
-resource/name = "taken-mail"
 length = 8.0
 loop = false
 step = 0.0
@@ -171,7 +182,7 @@ tracks/5/keys = {
 "values": [  ]
 }
 
-[sub_resource type="SampleLibrary" id=5]
+[sub_resource type="SampleLibrary" id=7]
 
 samples/coin = {
 "db": 0.0,
@@ -180,12 +191,12 @@ samples/coin = {
 "sample": ExtResource( 4 )
 }
 
-[sub_resource type="ColorRamp" id=6]
+[sub_resource type="ColorRamp" id=8]
 
 offsets = FloatArray( 0, 1 )
 colors = ColorArray( 1, 1, 1, 1, 0, 0, 0, 1 )
 
-[sub_resource type="ColorRamp" id=7]
+[sub_resource type="ColorRamp" id=9]
 
 offsets = FloatArray( 0, 0.00584795, 1 )
 colors = ColorArray( 0, 0, 0, 1, 0.933594, 0.503265, 0.866355, 1, 0.412903, 0.832492, 0.960938, 1 )
@@ -202,10 +213,14 @@ script/script = ExtResource( 1 )
 
 [node name="test" type="RigidBody2D" parent="."]
 
+transform/pos = Vector2( -1.5708, 1.52736 )
 input/pickable = false
 shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 0.741308, 0, 0, 2.03667, -0.474297, -95.3657 )
+shapes/0/transform = Matrix32( 0.186998, 0, 0, 0.379216, 28.8016, -21.8083 )
 shapes/0/trigger = false
+shapes/1/shape = SubResource( 2 )
+shapes/1/transform = Matrix32( 0.249807, 0, 0, 1.74485, 28.828, 19.2184 )
+shapes/1/trigger = false
 collision/layers = 1
 collision/mask = 1
 mode = 0
@@ -226,30 +241,40 @@ damp_override/angular = -1.0
 
 [node name="sprite" type="Sprite" parent="test"]
 
+transform/pos = Vector2( 29.4496, 4.19857 )
+transform/scale = Vector2( 0.26481, 0.26481 )
 texture = ExtResource( 2 )
 hframes = 5
 
 [node name="collision" type="CollisionShape2D" parent="test"]
 
-transform/pos = Vector2( -0.474297, -95.3657 )
-transform/scale = Vector2( 0.741308, 2.03667 )
+transform/pos = Vector2( 28.8016, -21.8083 )
+transform/scale = Vector2( 0.186998, 0.379216 )
 shape = SubResource( 1 )
 trigger = false
 _update_shape_index = 0
+
+[node name="BASE" type="CollisionShape2D" parent="test"]
+
+transform/pos = Vector2( 28.828, 19.2184 )
+transform/scale = Vector2( 0.249807, 1.74485 )
+shape = SubResource( 2 )
+trigger = false
+_update_shape_index = 1
 
 [node name="anim" type="AnimationPlayer" parent="."]
 
 playback/process_mode = 1
 playback/default_blend_time = 0.0
 root/root = NodePath("..")
-anims/idle_move = SubResource( 2 )
-"anims/mushroom bounce" = SubResource( 8 )
-anims/taken = SubResource( 3 )
-anims/taken-mail = SubResource( 4 )
+anims/idle_move = SubResource( 3 )
+"anims/mushroom bounce" = SubResource( 4 )
+anims/taken = SubResource( 5 )
+anims/taken-mail = SubResource( 6 )
 playback/active = true
 playback/speed = 3.0
 blend_times = [  ]
-autoplay = ""
+autoplay = "mushroom bounce"
 
 [node name="sound" type="SamplePlayer2D" parent="."]
 
@@ -261,7 +286,7 @@ params/attenuation/min_distance = 1.0
 params/attenuation/max_distance = 2048.0
 params/attenuation/distance_exp = 1.0
 config/polyphony = 1
-config/samples = SubResource( 5 )
+config/samples = SubResource( 7 )
 config/pitch_random = 0.0
 
 [node name="particles" type="Particles2D" parent="."]
@@ -289,7 +314,7 @@ params/final_size = 0.2
 params/hue_variation = 0.0
 params/anim_speed_scale = 1.0
 params/anim_initial_pos = 0.0
-color/color_ramp = SubResource( 6 )
+color/color_ramp = SubResource( 8 )
 
 [node name="enabler" type="VisibilityEnabler2D" parent="."]
 
@@ -333,27 +358,7 @@ params/anim_initial_pos = 0.0
 randomness/spin_velocity = 1.0
 randomness/orbit_velocity = 1.0
 color/color = Color( 0.957458, 0.957458, 0.972656, 1 )
-color/color_ramp = SubResource( 7 )
-
-[node name="testmap" type="TileMap" parent="."]
-
-visibility/visible = false
-transform/scale = Vector2( 1, 1 )
-mode = 0
-tile_set = ExtResource( 7 )
-cell/size = Vector2( 64, 64 )
-cell/quadrant_size = 16
-cell/custom_transform = Matrix32( 1, 0, 0, 1, 0, 0 )
-cell/half_offset = 2
-cell/tile_origin = 0
-cell/y_sort = false
-collision/use_kinematic = false
-collision/friction = 1.0
-collision/bounce = 0.0
-collision/layers = 1
-collision/mask = 1
-occluder/light_mask = 1
-tile_data = IntArray( 196605, 1, 196606, 1, 196607, 1, 131072, 1, 131073, 1, 131074, 1 )
+color/color_ramp = SubResource( 9 )
 
 [connection signal="body_enter" from="." to="." method="_on_body_enter"]
 
